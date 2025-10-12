@@ -1,4 +1,4 @@
-# **🚀 LearningProcess — 全栈学习与实践之路**
+# **LearningProcess — 全栈学习与实践之路**
 
 [🇨🇳 中文版](README.CN.md) | [🌍 English](README.md)
 
@@ -26,7 +26,7 @@
 
 ---
 
-## **🧭 项目简介**
+## **项目简介**
 
 > “学习不是记笔记，而是搭建自己的知识体系。”
 
@@ -40,7 +40,7 @@
 
 ---
 
-## **🧩 技术覆盖面**
+## **技术覆盖面**
 
 | **技术方向**        | **内容简介**                                                 |
 | ------------------- | ------------------------------------------------------------ |
@@ -65,107 +65,248 @@
 
 ---
 
-## **🗂️ 仓库结构**
+## **仓库结构**
 
 ```
-LearningProcess
-├── Blog_Articles         # 技术文章与实践教程
-├── Book_Recommendations  # 技术书籍推荐与学习路径
-├── git                   # Git 命令集合与分支策略
-├── Github                # 开源项目推荐与分析
-├── Go                    # Go 学习笔记与项目结构
-├── image                 # 图片与图示资源
-├── Java                  # Java 编程与后端开发
-├── Linux                 # Linux 命令与系统管理
-├── MySQL                 # 数据库设计与性能优化
-├── Other                 # 工具配置与实践经验
-├── Python                # Python 爬虫 / 脚本 / Web 框架
-├── Web                   # 前端开发与工程化实践
+LEARNINGPROCESS
+├── 博客文章            # 技术文章分享
+├── 书籍推荐            # 值得一读的经典书籍
+├── git                 # Git 使用技巧与命令
+├── Github              # 优秀项目推荐与分析
+├── Go                  # Go 学习笔记与实战
+├── image               # 图片资源
+├── Java                # Java 学习记录
+├── Linux               # Linux 常用知识点
+├── MySQL               # 数据库学习笔记
+├── Other               # 杂项经验与工具集合
+├── Python              # Python 编程笔记
+├── Web                 # 前端开发相关内容
 ```
 
 ---
 
 ## **🔍 内容导览**
 
-### **🐬**
-
 ### [**MySQL 学习笔记**](./MySQL/)
 
-- CRUD 基础操作与 SQL 模型
-- 索引原理与执行计划优化
-- 事务隔离级别与锁机制
-- 数据库设计与性能调优
+- [Mysql 基础](MySQL/console.sql)
+
+- [group by 注意点](MySQL/group by.md)
+- [How to learn MySQL](MySQL/How to learn MySQL.md)
+- [mysql 小碎片](MySQL/mysql小碎片.md)
+-
 
 ---
-
-### **⚙️**
 
 ### [**Go 学习记录**](./Go/)
 
-- goroutine 并发机制与 channel 通信
-- Web 框架（Gin / Fiber）开发与中间件设计
-- 模块化项目结构与依赖管理
-- GC 性能调优与 Go Profiler 使用
+- [golang 基础语法](Go/GoStudy)
+- [leetcode 的一些题](Go/leetcode)(根据题目顺序命名)
+- [golang 库](Go/Library)
+  - [gin](Go/Library/Gin)
+  - [viper](Go/Library/viperStu)
+  - [zap](Go/Library/Zap)
+- [The Go Programming Language](Go/The Go Programming Language)
+
+- [golang 设计理念](Go/golang设计理念.md)
+- [go 源码阅读推荐](Go/go源码阅读推荐)
+- book
+  - [《Go 入门指南》](Go/《Go 入门指南》.pdf)
+  - [《Go 语言实战》](Go/Go 语言实战 .pdf)
+  - [《go 语言编程》](Go/Go语言编程高清完整版电子书.pdf)
+  - [《学习 go 语言》](<Go/学习Go语言(Golang).pdf>)
 
 ---
-
-### **🐍**
 
 ### [**Python 实战笔记**](./Python/)
 
-- 自动化脚本与系统任务
-- 网络爬虫与反爬机制
-- Flask / FastAPI 框架实战
-- 数据处理与 Pandas 分析
+- [基础语法](Python/Py_Study)
+
+- [leetcode](Python/leetcode)
+- [小项目](https://github.com/genwilliam/DNSLog)
 
 ---
-
-### **🧠**
 
 ### [**前端开发知识库**](./Web/)
 
-- HTML / CSS / JavaScript 基础
-- Vue / React 组件化与状态管理
-- 前端构建工具（Vite / Webpack）
-- 性能优化与 Lighthouse 评分提升
+- [html 基础](Web/HTML_code)
+- [css 基础](Web/CSS_code)
+- [js 基础](Web/JavaScript_code)
+- [html5](Web/HTML_code/HTML5)
+- [css3](https://www.runoob.com/css3/css3-tutorial.html)（点击跳转学习）
+- 一些实战：
+
+  - [Experiment](Web/Experiment)
+  - [购物商城](Web/购物商城)
+
+- 一点点小知识：
+
+  - [js 没报错怎么办](Web/前端报错问题.md)
+  - [关于 br 的用法](Web/关于br的用法.md)
+  - [event.preventDefault();的作用](<Web/event.preventDefault();的作用.md>)
+  - [使用 form 标签时怎么自动换行](Web/使用 form 标签时怎么自动换行.md)
+  - [HTML 中为什么在一些标签如： select 和 input 标签时，需要用 label 放在前面](Web/HTML 中为什么在一些标签如： select 和 input 标签时，需要用 label 放在前面.md)
+  - [pycharm 启动 HTML 的问题](Web/pycharm启动HTML的问题.md)
+  - [vscode 不能用 powershell](Web/vscode中不能使用npm等命令.md)
+  - [localhost 和 127.0.0.1 的区别](Web/localhost和127.0.0.1.md)
+  - [什么是.ini 文件](Web/什么是.ini文件.md)
+  - [什么是 DNS 服务器](Web/什么是DNS服务器.md)
+  - [let,var,const 区别](Web/let var const.md)
+  - [DNS 类型记录](Web/DNS类型记录.md)
+
+- [nodejs](Web/nodejs)
+- [es6](https://www.w3schools.com/js/js_es6.asp)（点击跳转网站）
+-
 
 ---
 
-### **🐧**
+### **🐧**[**Linux 运维与系统管理**](./Linux/)
 
-### [**Linux 运维与系统管理**](./Linux/)
+1. 入门：
 
-- 用户与权限系统
-- 文件系统结构与磁盘管理
-- 网络配置、系统监控与日志分析
-- Shell 脚本与自动化部署
+- [拥有一个 linux 系统](Linux/怎么拥有一个linux系统.md)
+
+2. 命令行
+
+- [linux 基本命令](Linux/Linux命令.md)
+- [shell](Linux/Shell.pdf)
+
+3. 文本操作：
+
+- [管道](Linux/管道.md)
+- [stdout、stdin、stderr](Linux/什么是标准输入输出流？.md)
+- [Linux 文本处理七剑客](Linux/Linux 文本处理七剑客.md)
+- [linux I/O](Linux/linux-I:O.md)
+
+4. 用户管理
+
+- [用户管理详解](Linux/Linux 用户管理详解：从“谁”到“能做什么”.md)
+
+5. 权限
+
+- [Linux 文件权限与所有权详解](Linux/Linux 文件权限与所有权详解.md)
+- [粘滞位](Linux/粘滞位（Sticky Bit）——让文件“粘”住.md)
+
+6. 进程
+
+- [Linux 进程与作业控制全面指南](Linux/Linux 进程与作业控制全面指南.md)
+- [聊聊 Linux 的进程权限](Linux/稍微聊聊 Linux 的进程权限.md)
+
+7. 包管理
+
+- [Linux 软件管理与源码编译指北](Linux/Linux 软件管理与源码编译指南.md)
+
+8. 设备
+
+- [理解 Linux 设备](Linux/理解 Linux 设备.md)
+
+9. 文件系统
+
+- [Linux 文件系统](Linux/Linux 文件系统详解.md)
 
 ---
-
-### **🧭**
 
 ### [**Git & GitHub 实用技巧**](./git/)
 
-- 分支策略与合并规范
-- Commit Message 标准化
-- PR 审核与协作工作流
-- GitHub Actions 自动化部署
+#### git
+
+- [终端的美化](git/终端的美化.md)
+- [git 简单推送](git/First.md)
+- [.gitignore 说明](git/关于.gitignore.md)
+- [我的.zshrc](git/config)
+
+#### github 项目推荐
+
+- [carbon](Github/carbon.md)
+
+ 用于将源代码片段生成好看的图片，方便分享到社交媒体或博客，带语法高亮、定制主题等功能
+
+- [Coding Interview University](Github/Coding Interview University.md)
+
+ 这是一个极具人气的开源项目，由 John Washam 发布，目的是为准备技术面试的人提供一条系统的自学路线。它包含算法与数据结构、系统设计、操作系统、网络等各类面试常见知识点。
+
+它更像是一个“逐步自学指南 + 知识地图”，将面试知识模块化、可执行。许多开发者在面试准备阶段都会参照它的学习路径。
+
+- [developer-loadmap](Github/developer-loadmap.md)
+
+ 公开资料中关于这个名字的项目比较少见，可能是一个个人整理的技术路线图或“开发者能力地图”类型的仓库。通常这样的项目会列出技术栈、能力框架、学习路线、工具列表等，帮助读者理解“作为开发者应该掌握什么”。
+
+- [Fabrice Bellard](Github/Fabrice Bellard.md)
+
+这不是项目，这里主要介绍一下 Fabrice Bellard
+
+- [Stirling-pdf](Github/Stirling-pdf.md)
+
+ 本地托管的 Web 应用，用于对 PDF 文件执行各种操作
 
 ---
 
-### **📚**
+### [**Book**](书籍推荐)
 
-### [**推荐学习资源**](./Book_Recommendations/)
+#### golang
 
-- 《深入理解计算机系统》
-- 《计算机网络：自顶向下方法》
-- 《Go 语言圣经》
-- 《Fluent Python》
-- 博客与项目实践合集（见 Blog_Articles）
+- **[go语言实战](书籍推荐/golang/go语言实战)**
+- [Go 入门指南](书籍推荐/golang/《Go 入门指南》.pdf)
+- [Go Web 编程](书籍推荐/golang/Go Web 编程.pdf)
+- [Go 学习笔记](书籍推荐/golang/Go 学习笔记 第四版.pdf)
+- [Go_web_编程](书籍推荐/golang/Go_web_编程.pdf)
+- [常见面试题目](书籍推荐/golang/Golang常见面试题目解析.pdf)
+- [Go并发编程实战](书籍推荐/golang/Go并发编程实战_第2版_Lite.pdf)
+- [Go源码剖析](书籍推荐/golang/Go源码剖析（书签版）.pdf)
+- [网络编程](书籍推荐/golang/Go网络编程.pdf)
+- [Go语言圣经(中文版](书籍推荐/golang/Go语言圣经(中文版).pdf)
+- [大厂Go工程师面试题集锦](书籍推荐/golang/大厂Go工程师面试题集锦.docx)
+- [Go语言核心编程笔记zip](书籍推荐/golang/Go语言核心编程笔记.zip)
+
+#### linux
+
+- [LINUX UNIX设计思想](书籍推荐/Linux/LINUX UNIX设计思想.pdf)
+- [跟老男孩学Linux运维：Web集群实战](书籍推荐/Linux/跟老男孩学Linux运维：Web集群实战.pdf)
+
+#### python
+
+- [python/Head_First_Python](书籍推荐/python/Head_First_Python)
+- [Python源码剖析](书籍推荐/python/Python源码剖析(完整版).pdf)
+
+
+
+
+
+#### 前端
+
+- [JavaScript高级程序设计](书籍推荐/JavaScript高级程序设计（第4版）.pdf)
+
+
+
+#### 网络
+
+- [计算机网络-自顶向下方法第七版](网络/计算机网络-自顶向下方法第七版.pdf)
+- [计算机网络-自顶向下课后答案md](网络/计算机网络-自顶向下课后答案.md)
+- [计算机网络：自顶向下方法（第七版）课后习题参考答案pdf](网络/计算机网络：自顶向下方法（第七版）课后习题参考答案.pdf)
+
+#### 其他
+
+- [剑指Offer](书籍推荐/《剑指Offer》题目及代码.pdf)
+- [hello-algo](https://github.com/krahets/hello-algo)
+
+- [提问的艺术](书籍推荐/提问的艺术-ChatGPT-提示技巧工程完全指南.pdf)
+- [数据结构与算法分析：C语言描述](书籍推荐/数据结构与算法分析：C语言描述（第2版）.pdf)
+- [程序是怎样跑起来的_矢泽久雄](书籍推荐/程序是怎样跑起来的_矢泽久雄.pdf)
+- [计算机组成与设计-硬件-软件接口](书籍推荐/计算机组成与设计-硬件-软件接口.pdf)
+
+- 
+
+
+
+### 博客文章
+
+- [如何学习：学习困难科目的实用思维方法](博客文章/如何学习：学习困难科目的实用思维方法.md)
+- [学习路线图](博客文章/学习路线图.md)
+- [我作为一名初级程序员所犯的错误](博客文章/我作为一名初级程序员所犯的错误.md)
 
 ---
 
-## **🤝 参与贡献**
+## **参与贡献**
 
 欢迎所有开发者共同完善本项目！
 
@@ -177,7 +318,7 @@ LearningProcess
 
 ---
 
-## **📜 许可证**
+## **许可证**
 
 本项目基于 [MIT License](./LICENSE) 开源，
 
@@ -189,9 +330,9 @@ LearningProcess
 
 如果这个项目对你有所帮助，请：
 
-- ⭐ **点亮 Star** 支持作者持续更新
-- 🪄 **分享给朋友** 一起学习成长
-- 🧩 **提出建议 / Issues**，共同改进项目
+- **点亮 Star** ⭐支持作者持续更新
+-  **分享给朋友** 一起学习成长
+- **提出建议 / Issues**，共同改进项目
 
 > “学习是一场持久的修行，
 

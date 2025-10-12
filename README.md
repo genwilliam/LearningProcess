@@ -1,16 +1,8 @@
-# **🚀 LearningProcess — The Road to Full-Stack Mastery**
-
-
-
-
+# **LearningProcess — The Journey of Full-Stack Learning and Practice**
 
 [🇨🇳 中文版](README.CN.md) | [🌍 English](README.md)
 
-
-
-------
-
-
+---
 
 🎯 **Project Name**: LearningProcess
 
@@ -18,15 +10,11 @@
 
 🌟 **Status**: Continuously Updated
 
-💻 **Type**: Full-Stack Development Notes / Developer Learning Roadmap
+💻 **Type**: Full Stack Development Notes / Developer Learning Roadmap
 
 🧩 **Related Project**: [dnslog_for_go](https://github.com/LianPeter/dnslog_for_go)
 
-
-
-------
-
-
+---
 
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/genwilliam/LearningProcess?style=for-the-badge&color=blueviolet" />
@@ -36,344 +24,301 @@
   <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" />
 </p>
 
+---
 
-
-------
-
-
-
-
-
-## **🧭 Overview**
-
-
-
-
+## **Project Overview**
 
 > “Learning is not about taking notes — it’s about building your own knowledge system.”
 
+**LearningProcess** is an open-source knowledge base focused on **Full Stack Development** and **Systematic Learning Paths**.
 
+It covers core topics such as **Backend, Frontend, Databases, Linux, Git, and Practical Projects**, combining
 
-**LearningProcess** is an open-source knowledge repository focused on **Full-Stack Development** and a **Systematic Developer Learning Roadmap**.
+**hands-on examples + conceptual explanations + structured knowledge**
 
+to help developers achieve a **complete full-stack transformation — from beginner to expert**.
 
+💡 **Goal**: To build an ever-evolving **Developer Growth Map**.
 
-It covers a wide range of essential areas such as **Backend, Frontend, Databases, Linux, Git, and Practical Projects**.
+---
 
-Each topic combines **hands-on practice, in-depth analysis, and structured learning**, helping developers transition **from beginner to expert**.
+## **Tech Stack Coverage**
 
+| **Category**        | **Description**                                                                  |
+| ------------------- | -------------------------------------------------------------------------------- |
+| 🐬 **MySQL**        | From basic CRUD to transaction management, index optimization, and query plans   |
+| ⚙️ **Go**           | Concurrency model, Web frameworks (Gin / Fiber), middleware & performance tuning |
+| 🐍 **Python**       | Automation scripts, data analysis, web backends (Flask / FastAPI)                |
+| 🧠 **Frontend**     | HTML / CSS / JavaScript / React / Vue componentization and engineering           |
+| 🐧 **Linux**        | System operations, permissions, networking, and shell automation                 |
+| 🧭 **Git & GitHub** | Branching strategies, commit conventions, workflows, and project analysis        |
 
-
-💡 **Goal**: To build an ever-evolving **Developer Growth Map** that reflects both theory and real-world experience.
-
-
-
-------
-
-
-
-
-
-## **🧩 Tech Coverage**
-
-
-
-| **Domain**         | **Description**                                              |
-| ------------------ | ------------------------------------------------------------ |
-| 🐬 **MySQL**        | From CRUD basics to transaction control, indexing, and query tuning |
-| ⚙️ **Go**           | Concurrency model, Gin/Fiber web frameworks, middleware, and profiling |
-| 🐍 **Python**       | Automation, data analysis, web frameworks (Flask / FastAPI), and scripting |
-| 🧠 **Frontend**     | HTML / CSS / JavaScript / React / Vue, modularization & optimization |
-| 🐧 **Linux**        | System operations, permissions, networking, and shell scripting |
-| 🧭 **Git & GitHub** | Branching strategy, commit standards, collaboration, and automation |
-
-
-
-------
-
-
-
-
+---
 
 ## **📚 Table of Contents**
 
+- [🧭 Project Overview](#project-overview)
+- [🧩 Tech Stack Coverage](#tech-stack-coverage)
+- [🗂️ Repository Structure](#repository-structure)
+- [🔍 Content Guide](#content-guide)
+- [🤝 Contribution](#contribution)
+- [📜 License](#license)
+- [🌟 Support](#support)
 
+---
 
-
-
-- [🧭 Overview](#🧭-overview)
-- [🧩 Tech Coverage](#🧩-tech-coverage)
-- [🗂️ Repository Structure](#🗂️-repository-structure)
-- [🔍 Content Guide](#🔍-content-guide)
-- [🤝 Contributing](#🤝-contributing)
-- [📜 License](#📜-license)
-- [🌟 Support & Motivation](#🌟-support--motivation)
-
-
-
-
-
-------
-
-
-
-
-
-## **🗂️ Repository Structure**
-
-
+## **Repository Structure**
 
 ```
-LearningProcess
-├── Blog_Articles         # Technical blogs and tutorials
-├── Book_Recommendations  # Recommended books and study paths
-├── git                   # Git commands, branching, and workflow
-├── Github                # Open-source project insights
-├── Go                    # Go notes, tools, and best practices
-├── image                 # Image assets and diagrams
-├── Java                  # Java programming and backend design
-├── Linux                 # Linux operations and system management
-├── MySQL                 # Database design and performance tuning
-├── Other                 # Tools, configs, and extra materials
-├── Python                # Python automation, scraping, and web frameworks
-├── Web                   # Frontend development and build tools
+LEARNINGPROCESS
+├── 博客文章            # Technical blog posts
+├── 书籍推荐            # Recommended books
+├── git                 # Git usage and tips
+├── Github              # Recommended GitHub projects
+├── Go                  # Go study notes and practice
+├── image               # Image resources
+├── Java                # Java learning notes
+├── Linux               # Linux essentials
+├── MySQL               # Database notes
+├── Other               # Miscellaneous tools & tips
+├── Python              # Python programming notes
+├── Web                 # Frontend development
 ```
 
-
-
-------
-
-
-
-
+---
 
 ## **🔍 Content Guide**
 
+### [**MySQL Notes**](./MySQL/)
 
+- [Mysql Basics](MySQL/console.sql)
+- [Group By Gotchas](MySQL/group by.md)
+- [How to Learn MySQL](MySQL/How to learn MySQL.md)
+- [MySQL Snippets](MySQL/mysql小碎片.md)
 
+---
 
+### [**Go Study Notes**](./Go/)
 
+- [Basic Go Syntax](Go/GoStudy)
 
+- [Leetcode Solutions](Go/leetcode)
 
-### **🐬** [**MySQL Notes**](./MySQL/)
+- [Go Libraries](Go/Library)
 
+  - [gin](Go/Library/Gin)
+  - [viper](Go/Library/viperStu)
+  - [zap](Go/Library/Zap)
 
+- [The Go Programming Language](Go/The Go Programming Language)
 
+- [Go Design Philosophy](Go/golang设计理念.md)
 
+- [Recommended Source Code](Go/go源码阅读推荐)
 
-- CRUD operations and SQL fundamentals
-- Index design and EXPLAIN optimization
-- Transaction isolation levels and locking mechanisms
-- Schema design and performance tuning
+- **Books**
 
+  - [《Go 入门指南》](Go/《Go 入门指南》.pdf)
+  - [《Go 语言实战》](Go/Go 语言实战 .pdf)
+  - [《go 语言编程》](Go/Go语言编程高清完整版电子书.pdf)
+  - [《学习 go 语言》](<Go/学习Go语言(Golang).pdf>)
 
+---
 
+### [**Python Practice Notes**](./Python/)
 
+- [Basic Syntax](Python/Py_Study)
+- [Leetcode Problems](Python/leetcode)
+- [Mini Projects](https://github.com/genwilliam/DNSLog)
 
-------
+---
 
+### [**Frontend Knowledge Base**](./Web/)
 
+- [HTML Basics](Web/HTML_code)
+- [CSS Basics](Web/CSS_code)
+- [JavaScript Basics](Web/JavaScript_code)
+- [HTML5](Web/HTML_code/HTML5)
+- [CSS3](https://www.runoob.com/css3/css3-tutorial.html)
 
+**Projects**
 
+- [Experiment](Web/Experiment)
+- [Shopping Mall](Web/购物商城)
 
-### **⚙️** [**Go Learning Notes**](./Go/)
+**Small Tips**
 
+- [JavaScript Error Handling](Web/前端报错问题.md)
+- [Usage of ](Web/关于br的用法.md)
+- [event.preventDefault()](<Web/event.preventDefault();的作用.md>)
+- [Form Auto Line Breaks](Web/使用 form 标签时怎么自动换行.md)
+- [Why label precedes select/input](Web/HTML 中为什么在一些标签如： select 和 input 标签时，需要用 label 放在前面.md)
+- [PyCharm HTML Issue](Web/pycharm启动HTML的问题.md)
+- [VSCode PowerShell Issue](Web/vscode中不能使用npm等命令.md)
+- [localhost vs 127.0.0.1](Web/localhost和127.0.0.1.md)
+- [What is .ini file](Web/什么是.ini文件.md)
+- [What is a DNS Server](Web/什么是DNS服务器.md)
+- [let, var, const differences](Web/let var const.md)
+- [DNS Record Types](Web/DNS类型记录.md)
 
+---
 
+### **🐧** [**Linux System & Operations**](./Linux/)
 
+1. **Getting Started**
 
-- goroutine concurrency and channel communication
-- Web frameworks (Gin / Fiber) and middleware patterns
-- Modular architecture & dependency management
-- GC optimization and Go Profiler usage
+   - [How to Get a Linux System](Linux/怎么拥有一个linux系统.md)
 
+2. **Command Line**
 
+   - [Basic Linux Commands](Linux/Linux命令.md)
+   - [Shell](Linux/Shell.pdf)
 
+3. **Text Processing**
 
+   - [Pipes](Linux/管道.md)
+   - [stdout, stdin, stderr](Linux/什么是标准输入输出流？.md)
+   - [The Seven Text Tools of Linux](Linux/Linux 文本处理七剑客.md)
+   - [Linux I/O](Linux/linux-I:O.md)
 
-------
+4. **User Management**
 
+   - [User Management Explained](Linux/Linux 用户管理详解：从“谁”到“能做什么”.md)
 
+5. **Permissions**
 
+   - [File Ownership and Permissions](Linux/Linux 文件权限与所有权详解.md)
+   - [Sticky Bit](Linux/粘滞位（Sticky Bit）——让文件“粘”住.md)
 
+6. **Processes**
 
-### **🐍** [**Python Practice Notes**](./Python/)
+   - [Process and Job Control Guide](Linux/Linux 进程与作业控制全面指南.md)
+   - [Process Permissions Discussion](Linux/稍微聊聊 Linux 的进程权限.md)
 
+7. **Package Management**
 
+   - [Software Management & Source Compilation Guide](Linux/Linux 软件管理与源码编译指南.md)
 
+8. **Devices**
 
+   - [Understanding Linux Devices](Linux/理解 Linux 设备.md)
 
-- Automation scripts & system tasks
-- Web crawling and anti-scraping techniques
-- Flask / FastAPI practical projects
-- Data processing with Pandas & visualization
+9. **File System**
 
+   - [Linux File System Explained](Linux/Linux 文件系统详解.md)
 
+---
 
+### [**Git & GitHub Tips**](./git/)
 
+#### **Git**
 
-------
+- [Beautify the Terminal](git/终端的美化.md)
+- [Simple Git Push](git/First.md)
+- [.gitignore Explained](git/关于.gitignore.md)
+- [My .zshrc](git/config)
 
+#### **GitHub Project Recommendations**
 
+- [carbon](Github/carbon.md) — generate beautiful code snippets with syntax highlighting
+- [Coding Interview University](Github/Coding Interview University.md) — a comprehensive self-study guide for tech interviews
+- [developer-loadmap](Github/developer-loadmap.md) — developer skill map & learning roadmap
+- [Fabrice Bellard](Github/Fabrice Bellard.md) — about the legendary developer
+- [Stirling-pdf](Github/Stirling-pdf.md) — local web app for PDF operations
 
+---
 
+### [**Books**](书籍推荐)
 
-### **🧠** [**Frontend Knowledge Base**](./Web/)
+#### golang
 
+- [go 语言实战](书籍推荐/golang/go语言实战)
+- [Go 入门指南](书籍推荐/golang/《Go 入门指南》.pdf)
+- [Go Web 编程](书籍推荐/golang/Go Web 编程.pdf)
+- [Go 学习笔记](书籍推荐/golang/Go 学习笔记 第四版.pdf)
+- [Go*web*编程](书籍推荐/golang/Go_web_编程.pdf)
+- [常见面试题目](书籍推荐/golang/Golang常见面试题目解析.pdf)
+- [Go 并发编程实战](书籍推荐/golang/Go并发编程实战_第2版_Lite.pdf)
+- [Go 源码剖析](书籍推荐/golang/Go源码剖析（书签版）.pdf)
+- [网络编程](书籍推荐/golang/Go网络编程.pdf)
+- [Go 语言圣经(中文版](<书籍推荐/golang/Go语言圣经(中文版).pdf>)
+- [大厂 Go 工程师面试题集锦](书籍推荐/golang/大厂Go工程师面试题集锦.docx)
+- [Go 语言核心编程笔记 zip](书籍推荐/golang/Go语言核心编程笔记.zip)
 
+#### linux
 
+- [LINUX UNIX 设计思想](书籍推荐/Linux/LINUX UNIX 设计思想.pdf)
+- [跟老男孩学 Linux 运维：Web 集群实战](书籍推荐/Linux/跟老男孩学Linux运维：Web集群实战.pdf)
 
+#### python
 
-- Core HTML / CSS / JavaScript concepts
-- Vue / React componentization & state management
-- Build tools: Vite / Webpack configuration
-- Performance optimization & Lighthouse improvement
+- [python/Head_First_Python](书籍推荐/python/Head_First_Python)
+- [Python 源码剖析](<书籍推荐/python/Python源码剖析(完整版).pdf>)
 
+#### Frontend
 
+- [JavaScript 高级程序设计](书籍推荐/JavaScript高级程序设计（第4版）.pdf)
 
+#### Networking
 
+- [计算机网络-自顶向下方法第七版](网络/计算机网络-自顶向下方法第七版.pdf)
+- [计算机网络-自顶向下课后答案 md](网络/计算机网络-自顶向下课后答案.md)
+- [计算机网络：自顶向下方法（第七版）课后习题参考答案 pdf](网络/计算机网络：自顶向下方法（第七版）课后习题参考答案.pdf)
 
-------
+#### Others
 
+- [剑指 Offer](书籍推荐/《剑指Offer》题目及代码.pdf)
+- [hello-algo](https://github.com/krahets/hello-algo)
 
+- [提问的艺术](书籍推荐/提问的艺术-ChatGPT-提示技巧工程完全指南.pdf)
+- [数据结构与算法分析：C 语言描述](书籍推荐/数据结构与算法分析：C语言描述（第2版）.pdf)
+- [程序是怎样跑起来的\_矢泽久雄](书籍推荐/程序是怎样跑起来的_矢泽久雄.pdf)
+- [计算机组成与设计-硬件-软件接口](书籍推荐/计算机组成与设计-硬件-软件接口.pdf)
 
+-
 
+### **Blog Articles**
 
-### **🐧** [**Linux Administration Notes**](./Linux/)
+- [How to Learn Difficult Subjects](博客文章/如何学习：学习困难科目的实用思维方法.md)
+- [Learning Roadmap](博客文章/学习路线图.md)
+- [Mistakes I Made as a Junior Developer](博客文章/我作为一名初级程序员所犯的错误.md)
 
+---
 
+## **Contribution**
 
+You are welcome to contribute!
 
+1. 🍴 Fork this repo
+2. 🌿 Create a new branch: git checkout -b feature/your-feature
+3. 💬 Commit your changes: git commit -m "Update description"
+4. 📤 Push your branch: git push origin feature/your-feature
+5. 🔁 Open a Pull Request and wait for review
 
-- User, group, and permission management
-- Filesystem structure & disk operations
-- Networking, monitoring, and log analysis
-- Shell scripting & automation techniques
+---
 
+## **License**
 
+This project is licensed under the [MIT License](./LICENSE).
 
+You are free to **learn, modify, and share** it — collaboration is encouraged.
 
+---
 
-------
-
-
-
-
-
-### **🧭** [**Git & GitHub Best Practices**](./git/)
-
-
-
-
-
-- Branching and merging strategies
-- Commit message conventions
-- Pull Request workflows & code reviews
-- CI/CD with GitHub Actions
-
-
-
-
-
-------
-
-
-
-
-
-### **📚** [**Learning Resources**](./Book_Recommendations/)
-
-
-
-
-
-- *Computer Systems: A Programmer’s Perspective*
-- *Computer Networking: A Top-Down Approach*
-- *The Go Programming Language*
-- *Fluent Python*
-- Blog articles & project-based learning (see [Blog_Articles](./Blog_Articles/))
-
-
-
-
-
-------
-
-
-
-
-
-## **🤝 Contributing**
-
-
-
-
-
-Contributions are warmly welcome!
-
-Follow these steps to participate:
-
-
-
-1. 🍴 **Fork** this repository
-2. 🌿 **Create a branch**: git checkout -b feature/your-feature
-3. 💬 **Commit changes**: git commit -m "describe your update"
-4. 📤 **Push branch**: git push origin feature/your-feature
-5. 🔁 **Submit a Pull Request** and wait for review
-
-
-
-
-
-------
-
-
-
-
-
-## **📜 License**
-
-
-
-
-
-This project is released under the [MIT License](./LICENSE).
-
-You are free to **study, modify, and distribute** the content — contributions and citations are encouraged.
-
-
-
-------
-
-
-
-
-
-## **🌟 Support & Motivation**
-
-
-
-
+## **🌟 Support**
 
 If you find this project helpful:
 
-
-
-- ⭐ **Star** this repo to support continuous updates
-- 🪄 **Share** it with your peers to grow together
-- 🧩 **Open an issue** for suggestions or improvements
-
-
-
-
+- **Star** ⭐ the repo to support the author
+- **Share** it with your friends
+- **Open Issues / Suggestions** to help improve it
 
 > “Learning is a lifelong journey,
 
-> and every note is a mark of progress.”
+> and notes are the footprints of growth.”
 
 <p align="center">
   <img src="https://img.shields.io/badge/Keep-Learning-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Stay-Curious-yellow?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Share-Knowledge-success?style=for-the-badge" />
 </p>
-
