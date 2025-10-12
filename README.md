@@ -110,7 +110,7 @@ LEARNINGPROCESS
   - [viper](Go/Library/viperStu)
   - [zap](Go/Library/Zap)
 
-- [The Go Programming Language](Go/The Go Programming Language)
+- [The Go Programming Language](Go/The%20Go%20Programming%20Language/)
 
 - [Go Design Philosophy](Go/golang设计理念.md)
 
@@ -118,10 +118,10 @@ LEARNINGPROCESS
 
 - **Books**
 
-  - [《Go 入门指南》](Go/《Go 入门指南》.pdf)
-  - [《Go 语言实战》](Go/Go 语言实战 .pdf)
-  - [《go 语言编程》](Go/Go语言编程高清完整版电子书.pdf)
-  - [《学习 go 语言》](<Go/学习Go语言(Golang).pdf>)
+  - [《Go 入门指南》](Go/《Go%20入门指南》.pdf)
+  - [《Go 语言实战》](Go/《Go%20语言实战》.pdf)
+  - [《go 语言编程》](Go/《Go语言编程高清完整版电子书》.pdf)
+  - [《学习 go 语言》](<Go/《学习Go语言(Golang)》.pdf>)
 
 ---
 
@@ -149,16 +149,16 @@ LEARNINGPROCESS
 **Small Tips**
 
 - [JavaScript Error Handling](Web/前端报错问题.md)
-- [Usage of ](Web/关于br的用法.md)
+- [Usage of br](Web/关于br的用法.md)
 - [event.preventDefault()](<Web/event.preventDefault();的作用.md>)
-- [Form Auto Line Breaks](Web/使用 form 标签时怎么自动换行.md)
-- [Why label precedes select/input](Web/HTML 中为什么在一些标签如： select 和 input 标签时，需要用 label 放在前面.md)
+- [Form Auto Line Breaks](Web/使用%20form%20标签时怎么自动换行.md)
+- [Why label precedes select/input](Web/HTML中为什么在一些标签如：%20select%20和%20input%20标签时，需要用%20label%20放在前面.md)
 - [PyCharm HTML Issue](Web/pycharm启动HTML的问题.md)
 - [VSCode PowerShell Issue](Web/vscode中不能使用npm等命令.md)
 - [localhost vs 127.0.0.1](Web/localhost和127.0.0.1.md)
 - [What is .ini file](Web/什么是.ini文件.md)
 - [What is a DNS Server](Web/什么是DNS服务器.md)
-- [let, var, const differences](Web/let var const.md)
+- [let, var, const differences](Web/let%20var%20const.md)
 - [DNS Record Types](Web/DNS类型记录.md)
 
 ---
@@ -178,34 +178,34 @@ LEARNINGPROCESS
 
    - [Pipes](Linux/管道.md)
    - [stdout, stdin, stderr](Linux/什么是标准输入输出流？.md)
-   - [The Seven Text Tools of Linux](Linux/Linux 文本处理七剑客.md)
+   - [The Seven Text Tools of Linux](Linux/Linux文本处理七剑客.md)
    - [Linux I/O](Linux/linux-I:O.md)
 
 4. **User Management**
 
-   - [User Management Explained](Linux/Linux 用户管理详解：从“谁”到“能做什么”.md)
+   - [User Management Explained](Linux/Linux用户管理详解：从“谁”到“能做什么”.md)
 
 5. **Permissions**
 
-   - [File Ownership and Permissions](Linux/Linux 文件权限与所有权详解.md)
-   - [Sticky Bit](Linux/粘滞位（Sticky Bit）——让文件“粘”住.md)
+   - [File Ownership and Permissions](Linux/Linux文件权限与所有权详解.md)
+   - [Sticky Bit](Linux/粘滞位（Sticky%20Bit）——让文件“粘”住.md)
 
 6. **Processes**
 
-   - [Process and Job Control Guide](Linux/Linux 进程与作业控制全面指南.md)
-   - [Process Permissions Discussion](Linux/稍微聊聊 Linux 的进程权限.md)
+   - [Process and Job Control Guide](Linux/Linux进程与作业控制全面指南.md)
+   - [Process Permissions Discussion](Linux/稍微聊聊Linux的进程权限.md)
 
 7. **Package Management**
 
-   - [Software Management & Source Compilation Guide](Linux/Linux 软件管理与源码编译指南.md)
+   - [Software Management & Source Compilation Guide](Linux/Linux软件管理与源码编译指南.md)
 
 8. **Devices**
 
-   - [Understanding Linux Devices](Linux/理解 Linux 设备.md)
+   - [Understanding Linux Devices](Linux/理解%20Linux%20设备.md)
 
 9. **File System**
 
-   - [Linux File System Explained](Linux/Linux 文件系统详解.md)
+   - [Linux File System Explained](Linux/Linux%20文件系统详解.md)
 
 ---
 
@@ -221,9 +221,9 @@ LEARNINGPROCESS
 #### **GitHub Project Recommendations**
 
 - [carbon](Github/carbon.md) — generate beautiful code snippets with syntax highlighting
-- [Coding Interview University](Github/Coding Interview University.md) — a comprehensive self-study guide for tech interviews
+- [Coding Interview University](Github/Coding%20Interview%20University.md) — a comprehensive self-study guide for tech interviews
 - [developer-loadmap](Github/developer-loadmap.md) — developer skill map & learning roadmap
-- [Fabrice Bellard](Github/Fabrice Bellard.md) — about the legendary developer
+- [Fabrice Bellard](Github/Fabrice%20Bellard.md) — about the legendary developer
 - [Stirling-pdf](Github/Stirling-pdf.md) — local web app for PDF operations
 
 ---
@@ -233,9 +233,9 @@ LEARNINGPROCESS
 #### golang
 
 - [go 语言实战](书籍推荐/golang/go语言实战)
-- [Go 入门指南](书籍推荐/golang/《Go 入门指南》.pdf)
-- [Go Web 编程](书籍推荐/golang/Go Web 编程.pdf)
-- [Go 学习笔记](书籍推荐/golang/Go 学习笔记 第四版.pdf)
+- [Go 入门指南](书籍推荐/golang/《Go%20入门指南》.pdf)
+- [Go Web 编程](书籍推荐/golang/Go%20Web%20编程.pdf)
+- [Go 学习笔记](书籍推荐/golang/Go%20学习笔记%20第四版.pdf)
 - [Go*web*编程](书籍推荐/golang/Go_web_编程.pdf)
 - [常见面试题目](书籍推荐/golang/Golang常见面试题目解析.pdf)
 - [Go 并发编程实战](书籍推荐/golang/Go并发编程实战_第2版_Lite.pdf)
@@ -247,7 +247,7 @@ LEARNINGPROCESS
 
 #### linux
 
-- [LINUX UNIX 设计思想](书籍推荐/Linux/LINUX UNIX 设计思想.pdf)
+- [LINUX UNIX 设计思想](书籍推荐/Linux/LINUX%20UNIX设计思想.pdf)
 - [跟老男孩学 Linux 运维：Web 集群实战](书籍推荐/Linux/跟老男孩学Linux运维：Web集群实战.pdf)
 
 #### python
