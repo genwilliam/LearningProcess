@@ -42,14 +42,14 @@
 
 ## **技术覆盖面**
 
-| **技术方向**        | **内容简介**                                                 |
-| ------------------- | ------------------------------------------------------------ |
-| **MySQL**        | 从基础 CRUD 到事务管理、索引优化、SQL 调优与执行计划分析     |
-| **Go**           | 并发模型、Web 框架（Gin / Fiber）、中间件开发与性能优化      |
-| **Python**       | 自动化脚本、数据分析、爬虫与 Web 后端框架（Flask / FastAPI） |
-| **Frontend**     | HTML / CSS / JavaScript / React / Vue 组件化与工程化         |
-| **Linux**        | 系统操作、权限管理、网络调优与 Shell 自动化脚本              |
-| **Git & GitHub** | 分支策略、提交规范、协作流程与优质项目分析                   |
+| **技术方向**     | **内容简介**                                                      |
+| ---------------- | ----------------------------------------------------------------- |
+| **MySQL**        | 从基础 CRUD 到事务管理、索引优化、SQL 调优与执行计划分析          |
+| **Go**           | 并发模型、frontend 框架（Gin / Fiber）、中间件开发与性能优化      |
+| **Python**       | 自动化脚本、数据分析、爬虫与 frontend 后端框架（Flask / FastAPI） |
+| **Frontend**     | HTML / CSS / JavaScript / React / Vue 组件化与工程化              |
+| **Linux**        | 系统操作、权限管理、网络调优与 Shell 自动化脚本                   |
+| **Git & GitHub** | 分支策略、提交规范、协作流程与优质项目分析                        |
 
 ---
 
@@ -80,12 +80,12 @@ LEARNINGPROCESS
 ├── MySQL               # 数据库学习笔记
 ├── Other               # 杂项经验与工具集合
 ├── Python              # Python 编程笔记
-├── Web                 # 前端开发相关内容
+├── frontend                 # 前端开发相关内容
 ```
 
 ---
 
-## **🔍 内容导览**
+## **内容导览**
 
 ### [**MySQL 学习笔记**](./MySQL/)
 
@@ -125,34 +125,34 @@ LEARNINGPROCESS
 
 ---
 
-### [**前端开发知识库**](./Web/)
+### [**前端开发知识库**](./frontend/)
 
-- [html 基础](Web/HTML_code)
-- [css 基础](Web/CSS_code)
-- [js 基础](Web/JavaScript_code)
-- [html5](Web/HTML_code/HTML5)
+- [html 基础](frontend/HTML_code)
+- [css 基础](frontend/CSS_code)
+- [js 基础](frontend/JavaScript_code)
+- [html5](frontend/HTML_code/HTML5)
 - [css3](https://www.runoob.com/css3/css3-tutorial.html)（点击跳转学习）
 - 一些实战：
 
-  - [Experiment](Web/Experiment)
-  - [购物商城](Web/购物商城)
+  - [Experiment](frontend/Experiment)
+  - [购物商城](frontend/购物商城)
 
 - 一点点小知识：
 
-  - [js 没报错怎么办](Web/前端报错问题.md)
-  - [关于 br 的用法](Web/关于br的用法.md)
-  - [event.preventDefault();的作用](<Web/event.preventDefault();的作用.md>)
-  - [使用 form 标签时怎么自动换行](Web/使用%20form%20标签时怎么自动换行.md)
-  - [HTML 中为什么在一些标签如： select 和 input 标签时，需要用 label 放在前面](Web/HTML%20中为什么在一些标签如：%20select%20和%20input%20标签时，需要用%20label%20放在前面.md)
-  - [pycharm 启动 HTML 的问题](Web/pycharm启动HTML的问题.md)
-  - [vscode 不能用 powershell](Web/vscode中不能使用npm等命令.md)
-  - [localhost 和 127.0.0.1 的区别](Web/localhost和127.0.0.1.md)
-  - [什么是.ini 文件](Web/什么是.ini文件.md)
-  - [什么是 DNS 服务器](Web/什么是DNS服务器.md)
-  - [let,var,const 区别](Web/let%20var%20const.md)
-  - [DNS 类型记录](Web/DNS类型记录.md)
+  - [js 没报错怎么办](frontend/前端报错问题.md)
+  - [关于 br 的用法](frontend/关于br的用法.md)
+  - [event.preventDefault();的作用](<frontend/event.preventDefault();的作用.md>)
+  - [使用 form 标签时怎么自动换行](frontend/使用%20form%20标签时怎么自动换行.md)
+  - [HTML 中为什么在一些标签如： select 和 input 标签时，需要用 label 放在前面](frontend/HTML%20中为什么在一些标签如：%20select%20和%20input%20标签时，需要用%20label%20放在前面.md)
+  - [pycharm 启动 HTML 的问题](frontend/pycharm启动HTML的问题.md)
+  - [vscode 不能用 powershell](frontend/vscode中不能使用npm等命令.md)
+  - [localhost 和 127.0.0.1 的区别](frontend/localhost和127.0.0.1.md)
+  - [什么是.ini 文件](frontend/什么是.ini文件.md)
+  - [什么是 DNS 服务器](frontend/什么是DNS服务器.md)
+  - [let,var,const 区别](frontend/let%20var%20const.md)
+  - [DNS 类型记录](frontend/DNS类型记录.md)
 
-- [nodejs](Web/nodejs)
+- [nodejs](frontend/nodejs)
 - [es6](https://www.w3schools.com/js/js_es6.asp)（点击跳转网站）
 - ***
 
@@ -174,25 +174,25 @@ LEARNINGPROCESS
 - [Linux 文本处理七剑客](Linux/Linux%20文本处理七剑客.md)
 - [linux I/O](Linux/linux-I:O.md)
 
-1. 用户管理
+4. 用户管理
 
 - [用户管理详解](Linux/Linux%20用户管理详解：从“谁”到“能做什么”.md)
 
-1. 权限
+5. 权限
 
 - [Linux 文件权限与所有权详解](Linux/Linux%20文件权限与所有权详解.md)
 - [粘滞位](Linux/粘滞位（Sticky%20Bit）——让文件“粘”住.md)
 
-1. 进程
+6. 进程
 
 - [Linux 进程与作业控制全面指南](Linux/Linux%20进程与作业控制全面指南.md)
 - [聊聊 Linux 的进程权限](Linux/稍微聊聊%20Linux%20的进程权限.md)
 
-1. 包管理
+7. 包管理
 
 - [Linux 软件管理与源码编译指北](Linux/Linux%20软件管理与源码编译指南.md)
 
-1. 设备
+8. 设备
 
 - [理解 Linux 设备](Linux/理解%20Linux%20设备.md)
 
@@ -233,7 +233,7 @@ LEARNINGPROCESS
 
 - [Stirling-pdf](Github/Stirling-pdf.md)
 
-本地托管的 Web 应用，用于对 PDF 文件执行各种操作
+本地托管的 frontend 应用，用于对 PDF 文件执行各种操作
 
 ---
 
@@ -243,9 +243,9 @@ LEARNINGPROCESS
 
 - **[go 语言实战](书籍推荐/golang/go语言实战)**
 - [Go 入门指南](书籍推荐/golang/《Go%20入门指南》.pdf)
-- [Go Web 编程](书籍推荐/golang/Go%20Web%20编程.pdf)
+- [Go frontend 编程](书籍推荐/golang/Go%20frontend%20编程.pdf)
 - [Go 学习笔记](书籍推荐/golang/Go%20学习笔记%20第四版.pdf)
-- [Go*web*编程](书籍推荐/golang/Go_web_编程.pdf)
+- [Go*frontend*编程](书籍推荐/golang/Go_frontend_编程.pdf)
 - [常见面试题目](书籍推荐/golang/Golang常见面试题目解析.pdf)
 - [Go 并发编程实战](书籍推荐/golang/Go并发编程实战_第2版_Lite.pdf)
 - [Go 源码剖析](书籍推荐/golang/Go源码剖析（书签版）.pdf)
@@ -257,7 +257,7 @@ LEARNINGPROCESS
 #### linux
 
 - [LINUX UNIX 设计思想](书籍推荐/Linux/LINUX%20UNIX设计思想.pdf)
-- [跟老男孩学 Linux 运维：Web 集群实战](书籍推荐/Linux/跟老男孩学Linux运维：Web集群实战.pdf)
+- [跟老男孩学 Linux 运维：frontend 集群实战](书籍推荐/Linux/跟老男孩学Linux运维：frontend集群实战.pdf)
 
 #### python
 

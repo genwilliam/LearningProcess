@@ -87,7 +87,7 @@ LEARNINGPROCESS
 
 ---
 
-## **🔍 Content Guide**
+## **Content Guide**
 
 ### [**MySQL Notes**](./MySQL/)
 
