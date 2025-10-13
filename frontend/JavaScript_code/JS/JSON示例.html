@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    // 定义JSON
+    var str =  '{"name":"Tom", "age":18, "addr":["北京", "上海"]}';
+    alert(str.name);
+
+    // json --> JS对象
+    var obj = JSON.parse(str);
+    alert(obj.name);
+
+    // JS对象 --> JSON字符串
+    alert(JSON.stringify(obj));
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复合字体</title>
+    <style>
+        div {
+            /*font-style: italic;*/
+            /*font-weight: 700;*/
+            /*font-size: 16px;*/
+            /*font-family: "Microsoft Himalaya",serif;*/
+
+            /* 复合属性：简化的方式 */
+            /*一定一定要按照以下顺序写*/
+            /* font: font-style font-weight font-size/line-height font-family*/
+            font: italic 700 16px 'Microsoft Himalaya';
+            /*不需要的属性可以省略（取默认值），但必须保留font-size 和 font-family属性 */
+        }
+    </style>
+</head>
+<body>
+<div>庭有枇杷树</div>
+<div>吾妻死之年所手植也</div>
+<div>今已亭亭如盖矣</div>
+</body>
+</html>

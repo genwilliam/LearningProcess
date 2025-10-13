@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成绩管理</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    .score-list { text-align: left; }
+  </style>
+</head>
+<body>
+  <h2>成绩管理</h2>
+  <div class="score-list" id="scoreList"></div>
+
+  <script>
+    const scores = [
+      { student: "张三", score: 10 },
+      { student: "李四", score: 8 }
+    ];
+
+    function displayScores() {
+      const scoreList = document.getElementById("scoreList");
+      scoreList.innerHTML = ''; // 清空列表
+      scores.forEach(s => {
+        scoreList.innerHTML += `<p>${s.student}: ${s.score} 分</p>`;
+      });
+    }
+
+    displayScores();
+  </script>
+</body>
+</html>

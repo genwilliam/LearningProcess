@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .form-container {
+            background-color: #fff;
+            border: 2px solid #ff6699;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            color: #ff6699;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container select,
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #ff6699;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #ff3366;
+        }
+    </style>
+    
+    <script>
+        function validateForm() {
+            // 登录名验证: 字母和数字，长度为4-10
+            var loginName = document.getElementById("loginName").value;
+            if (!/^[a-zA-Z0-9]{4,10}$/.test(loginName)) {
+                alert("登录名应为4到10位的字母或数字");
+                return false;
+            }
+
+            // 登录密码验证: 至少6位
+            var password = document.getElementById("password").value;
+            if (password.length < 6) {
+                alert("密码应至少6位");
+                return false;
+            }
+
+            // 确认密码验证: 必须与登录密码一致
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            if (confirmPassword !== password) {
+                alert("两次输入的密码不一致");
+                return false;
+            }
+
+            // 身份证验证: 15位或18位数字
+            var idNumber = document.getElementById("idNumber").value;
+            if (!/^\d{15}$|^\d{18}$/.test(idNumber)) {
+                alert("身份证号应为15位或18位数字");
+                return false;
+            }
+
+            // 电话号码验证: 例子格式为010-58452156
+            var phone = document.getElementById("phone").value;
+            if (!/^\d{3}-\d{8}$/.test(phone)) {
+                alert("电话号码格式应为区号-电话号码,例如010-58452156");
+                return false;
+            }
+
+            // 手机号码验证: 11位数字，以1开头
+            var mobile = document.getElementById("mobile").value;
+            if (!/^1\d{10}$/.test(mobile)) {
+                alert("手机号码应为11位数字,且以1开头");
+                return false;
+            }
+
+            // 邮箱验证: 例子格式为xxx@xxx.com
+            var email = document.getElementById("email").value;
+            if (!/^[\w-]+@[\w-]+\.[a-z]{2,4}$/.test(email)) {
+                alert("请输入有效的邮箱地址,例如example@domain.com");
+                return false;
+            }
+
+            // 现居住地验证: 必须选择一个省份
+            var province = document.getElementById("province").value;
+            if (province === "") {
+                alert("请选择现居住地");
+                return false;
+            }
+
+            alert("表单提交成功！");
+            return true;
+        }
+    </script>
+</head>
+<body>
+<div class="form-container">
+    <h2>欢迎您申请 SOHO 联名信用卡</h2>
+    <form onsubmit="return validateForm()">
+        <label>登录名:</label>
+        <input type="text" id="loginName" placeholder="请输入登录名">
+
+        <label>登录密码:</label>
+        <input type="password" id="password" placeholder="请输入登录密码">
+
+        <label>确认密码:</label>
+        <input type="password" id="confirmPassword" placeholder="请再次输入密码">
+
+        <label>身份证号:</label>
+        <input type="text" id="idNumber" placeholder="请输入身份证号">
+
+        <label>电话号码 (例: 010-58452156):</label>
+        <input type="text" id="phone" placeholder="例如 010-58452156">
+
+        <label>手机号码:</label>
+        <input type="text" id="mobile" placeholder="请输入手机号码">
+
+        <label>电子邮箱:</label>
+        <input type="text" id="email" placeholder="请输入电子邮箱">
+
+        <label>现居住地:</label>
+        <select id="province">
+            <option value="">请选择省份</option>
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="天津">天津</option>
+            <option value="重庆">重庆</option>
+            <option value="河北">河北</option>
+            <option value="山西">山西</option>
+            <option value="辽宁">辽宁</option>
+            <option value="吉林">吉林</option>
+            <option value="黑龙江">黑龙江</option>
+            <option value="江苏">江苏</option>
+            <option value="浙江">浙江</option>
+            <option value="安徽">安徽</option>
+            <option value="福建">福建</option>
+            <option value="江西">江西</option>
+            <option value="山东">山东</option>
+            <option value="河南">河南</option>
+            <option value="湖北">湖北</option>
+            <option value="湖南">湖南</option>
+            <option value="广东">广东</option>
+            <option value="海南">海南</option>
+            <option value="四川">四川</option>
+            <option value="贵州">贵州</option>
+            <option value="云南">云南</option>
+            <option value="陕西">陕西</option>
+            <option value="甘肃">甘肃</option>
+            <option value="青海">青海</option>
+            <option value="内蒙古">内蒙古</option>
+            <option value="广西">广西</option>
+            <option value="西藏">西藏</option>
+            <option value="宁夏">宁夏</option>
+            <option value="新疆">新疆</option>
+            <option value="香港">香港</option>
+            <option value="澳门">澳门</option>
+            <option value="台湾">台湾</option>
+        </select>
+
+        <input type="submit" value="提交申请">
+    </form>
+</div>
+</body>
+</html>

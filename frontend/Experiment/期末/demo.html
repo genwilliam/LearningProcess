@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工信息管理系统</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* 全局字体设置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;  /* 淡灰背景色，提升视觉舒适度 */
+    color: #333;  /* 设置文字颜色为深灰色，减少视觉疲劳 */
+}
+
+/* 页面主内容容器 */
+#employeePage, #addEmployeePage {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;  /* 白色背景，让内容区更突出 */
+    border-radius: 8px;  /* 添加圆角，使页面更加柔和 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* 添加阴影，增加立体感 */
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;  /* 合并边框，去除表格内的双重边框 */
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;  /* 边框颜色更柔和 */
+}
+
+table th {
+    background-color: #007bff;  /* 蓝色背景使表头更显眼 */
+    color: white;  /* 白色文字，增加对比度 */
+    font-weight: bold;
+}
+
+table td {
+    background-color: #f9f9f9;  /* 单元格背景色，增加可读性 */
+}
+
+table tr:nth-child(even) td {
+    background-color: #f1f1f1;  /* 奇偶行背景交替，提升阅读体验 */
+}
+
+/* 表单样式 */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;  /* 边框颜色柔和，避免过于突兀 */
+    border-radius: 4px;  /* 边框圆角 */
+    box-sizing: border-box;  /* 确保内边距和宽度不冲突 */
+    font-size: 16px;
+}
+
+form input:focus {
+    border-color: #007bff;  /* 聚焦时改变边框颜色，增强用户体验 */
+    outline: none;
+}
+
+/* 按钮样式 */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;  /* 蓝色按钮背景 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;  /* 悬停时按钮颜色变深 */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="loginPage" class="container">
+        <h1>员工信息管理系统</h1>
+        <form id="loginForm">
+            <div class="mb-3">
+                <input type="text" id="username" class="form-control" placeholder="管理员账号" required />
+            </div>
+            <div class="mb-3">
+                <input type="password" id="password" class="form-control" placeholder="密码" required />
+            </div>
+            <button type="submit" class="btn btn-primary">登录</button>
+        </form>
+    </div>
+
+    <div id="employeePage" class="container" style="display: none;">
+        <h2>员工信息管理</h2>
+        <br>
+        <!-- 查询功能 -->
+        <div class="mb-3">
+            <label for="searchEmployee" class="form-label">查询员工</label>
+            <input type="text" id="searchEmployee" class="form-control" placeholder="输入姓名查询" />
+        </div>
+        <button id="addEmployeeBtn" class="btn btn-success">添加员工</button>
+        <button id="deleteSelectedBtn" class="btn btn-danger">删除选中员工</button>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAll" /></th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>电话</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+                <!-- 员工信息动态加载 -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="addEmployeePage" class="container" style="display: none;">
+        <h2>添加员工信息</h2>
+        <form id="addEmployeeForm">
+            <div class="mb-3">
+                <label for="employeeName" class="form-label">姓名</label>
+                <input type="text" id="employeeName" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="employeeAge" class="form-label">年龄</label>
+                <input type="number" id="employeeAge" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="employeePhone" class="form-label">电话</label>
+                <input type="text" id="employeePhone" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-success">提交</button>
+            <button type="button" id="cancelAddBtn" class="btn btn-secondary">取消</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 初始化默认员工数据
+            var employees = [
+                { name: "韩梅梅", age: 20, gender: "女", phone: "13512346985", address: "北京海淀区" },
+                { name: "李小东", age: 18, gender: "男", phone: "15821536985", address: "河北邢台" },
+                { name: "李小雷", age: 20, gender: "男", phone: "13582583844", address: "北京西城区" },
+                { name: "马尔东", age: 19, gender: "男", phone: "13465896542", address: "河北秦皇岛" }
+            ];
+
+            // 管理员登录功能
+            $('#loginForm').submit(function (event) {
+                event.preventDefault();
+
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                if (username === "admin" && password === "123456") {
+                    $('#loginPage').hide();
+                    $('#employeePage').show();
+                    updateEmployeeTable(); // 登录后立即加载员工表格
+                } else {
+                    alert("用户名或密码不正确，请重新填写！");
+                }
+            });
+
+            // 更新员工表格
+            function updateEmployeeTable(searchQuery = '') {
+                $('#employeeTable').empty();
+
+                // 遍历员工数据并添加到表格
+                employees.forEach(function (employee) {
+                    // 如果有查询条件，则进行筛选
+                    if (
+                        searchQuery === '' || // 没有查询条件时显示所有数据
+                        employee.name.includes(searchQuery) || // 名字匹配查询条件
+                        employee.address.includes(searchQuery) // 地址匹配查询条件
+                    ) {
+                        var newRow = `<tr>
+                    <td><input type="checkbox" class="selectEmployee" /></td>
+                    <td>${employee.name}</td>
+                    <td>${employee.age}</td>
+                    <td>${employee.gender}</td>
+                    <td>${employee.phone}</td>
+                    <td>${employee.address}</td>
+                    <td><button class="btn btn-danger deleteEmployeeBtn">删除</button></td>
+                  </tr>`;
+                        $('#employeeTable').append(newRow);
+                    }
+                });
+            }
+
+            // 添加员工按钮
+            $('#addEmployeeBtn').click(function () {
+                $('#employeePage').hide();
+                $('#addEmployeePage').show();
+            });
+
+            // 取消添加员工
+            $('#cancelAddBtn').click(function () {
+                $('#addEmployeePage').hide();
+                $('#employeePage').show();
+            });
+
+            // 提交添加员工信息
+            $('#addEmployeeForm').submit(function (event) {
+                event.preventDefault();
+
+                var name = $('#employeeName').val();
+                var age = $('#employeeAge').val();
+                var gender = $('#employeeGender').val();
+                var phone = $('#employeePhone').val();
+                var address = $('#employeeAddress').val();
+
+                // 校验输入数据
+                var nameRegex = /^[\u4e00-\u9fa5]{2,5}$/;
+                var ageRegex = /^[2-4][0-9]$/;
+                var phoneRegex = /^(13|15|17|18)\d{9}$/;
+
+                // 员工信息规则
+                if (!nameRegex.test(name)) {
+                    alert("姓名应为2-5个汉字");
+                    return;
+                }
+                if (!ageRegex.test(age)) {
+                    alert("年龄应为20-40岁");
+                    return;
+                }
+                if (!phoneRegex.test(phone)) {
+                    alert("电话格式不正确");
+                    return;
+                }
+
+                // 添加员工信息到员工列表
+                var newEmployee = { name: name, age: age, gender: gender, phone: phone, address: address };
+                employees.push(newEmployee);
+
+                // 更新员工表格
+                updateEmployeeTable();
+
+                // 清空输入框
+                $('#employeeName').val('');
+                $('#employeeAge').val('');
+                $('#employeeGender').val('');
+                $('#employeePhone').val('');
+                $('#employeeAddress').val('');
+
+                $('#addEmployeePage').hide();
+                $('#employeePage').show();
+            });
+
+            // 删除单个员工信息
+            $('#employeeTable').on('click', '.deleteEmployeeBtn', function () {
+                var rowIndex = $(this).closest('tr').index();
+                employees.splice(rowIndex, 1); // 从员工数组中删除该员工
+                updateEmployeeTable(); // 更新员工表格
+            });
+
+            // 全选/全不选功能
+            $('#selectAll').change(function () {
+                var isChecked = $(this).prop('checked');
+                $('.selectEmployee').prop('checked', isChecked);
+            });
+
+            // 删除选中的员工信息
+            $('#deleteSelectedBtn').click(function () {
+                $('.selectEmployee:checked').each(function () {
+                    var rowIndex = $(this).closest('tr').index();
+                    employees.splice(rowIndex, 1); // 从员工数组中删除该员工
+                });
+                updateEmployeeTable(); // 更新员工表格
+            });
+
+            // 查询员工功能
+            $('#searchEmployee').on('input', function () {
+                var searchQuery = $(this).val();
+                updateEmployeeTable(searchQuery);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

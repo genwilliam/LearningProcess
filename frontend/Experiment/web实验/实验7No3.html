@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册表单</title>
+</head>
+<body>
+    <form id="Form">
+        <label for="firstName">名字：</label>
+        <input type="text" id="firstName">
+        <br>
+
+        <label for="lastName">姓名：</label>
+        <input type="text" id="lastName">
+        <br>
+
+        <label for="name">登录名：</label>
+        <input type="text" id="name">
+        <br>
+
+        <label for="password">密码：</label>
+        <input type="password" id="password">
+        <br>
+
+        <label for="confirmPassword">再次输入密码：</label>
+        <input type="password" id="confirmPassword">
+        <br>
+
+        <label for="email">电子邮箱：</label>
+        <input type="email" id="email" placeholder="必须包含@字符">
+        <br>
+
+        <label for="sex">性别：</label>
+        <input type="radio" name="gender" value="男">男
+        <input type="radio" name="gender" value="女">女
+        <br>
+
+        <label for="avatar">头像：</label>
+        <input type="file" id="avatar">
+        <br>
+
+        <label for="hobby">兴趣爱好：</label>
+        <input type="checkbox" name="hobby" value="运动">运动
+        <input type="checkbox" name="hobby" value="聊天">聊天
+        <input type="checkbox" name="hobby" value="玩游戏">玩游戏
+        <br>
+
+        <label for="birthday">出生日期：</label>
+        <input type="date" id="birthday">
+        <br>
+
+        <button type="button" id="submit">提交</button>
+        <button type="button" id="clean">重置</button>
+    </form>
+
+    <script>
+        // 提交按钮事件
+        document.getElementById("submit").onclick = function() {
+            const email = document.getElementById("email").value;
+
+            // 检查邮箱是否包含@
+            if (!email.includes("@")) {
+                alert("邮箱必须包含@字符！");
+                return;
+            }
+
+            alert("注册成功！");
+            // 清空表单内容
+            document.getElementById("Form").reset();
+        };
+
+        // 重置按钮事件
+        document.getElementById("clean").onclick = function() {
+            // 调用表单的 reset 方法
+            document.getElementById("Form").reset();
+            // alert("重置成功！");
+        };
+    </script>
+</body>
+</html>

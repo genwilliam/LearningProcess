@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 获取用户输入的操作数和运算符
+    var num = parseFloat(prompt("输入操作数：")); // 转换为浮点数
+    var s = prompt("输入运算符(+,-,*,/)");
+    var num2 = parseFloat(prompt("输入另一操作数：")); // 转换为浮点数
+    var result;
+
+    // 使用 switch 进行运算
+    switch (s) {
+        case '+':
+            result = num + num2;
+            break;
+        case '-':
+            result = num - num2;
+            break;
+        case '*':
+            result = num * num2;
+            break;
+        case '/':
+            if (num2 === 0) { // 判断除数是否为 0
+                alert("Error: 除数为0");
+                break;
+            }
+            result = num / num2;
+            break;
+        default:
+            alert("Error: 输入的运算符有误");
+            break;
+    }
+
+    // 如果 result 被计算，弹出结果
+    if (result !== undefined) {
+    alert(`${num} ${s} ${num2} = ${result}`);
+
+    // 在控制台输出
+    
+}
+</script>
+</html>

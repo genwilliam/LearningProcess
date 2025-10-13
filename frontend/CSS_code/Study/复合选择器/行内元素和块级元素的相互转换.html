@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a {
+            width: 150px;
+            height: 50px;
+            background-color: pink;
+            /* 把行内元素转化为块级元素 */
+            display: block;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            color: pink;
+            background-color: black;
+            /* 把div块级元素转换为行内元素 */
+            display: inline; /*当设置为行内元素之后，前面的设置宽度高度的代码失效*/
+        }
+        span {
+            width: 250px;
+            height: 200px;
+            background-color: greenyellow;
+            /*行内元素转换为行内块元素*/
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<a href="#">今天是CSS的第4天</a>
+
+<div>今天是个好日子</div>
+
+<span>行内元素转换为行内块元素</span>
+<span>行内元素转换为行内块元素</span>
+</body>
+</html>

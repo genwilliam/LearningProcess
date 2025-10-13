@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>JavaScript Template Strings</h1>
+<p>Templates allow variables in strings:</p>
+
+<p id="demo"></p>
+
+<p>Templates are not supported in Internet Explorer.</p>
+
+<script>
+    let header = "Template Strings";
+    let tags = ["template strings", "javascript", "es6"];
+
+    let html = `<h2>${header}</h2><ul>`;
+
+    for (const x of tags) {
+        html += `<li>${x}</li>`;
+    }
+
+    html += `</ul>`;
+    document.getElementById("demo").innerHTML = html;
+</script>
+
+<!--
+以上代码使用了ES6的模板字符串功能来动态生成HTML内容。
+header 变量用于设置标题。
+tags 数组包含了列表项的内容。
+通过模板字符串 ${} 语法，可以将变量值嵌入到字符串中。
+使用 for...of 循环遍历 tags 数组，为每个标签生成一个 <li> 元素。
+最终生成的HTML结构包括一个二级标题和一个无序列表。
+-->
+
+</body>
+</html>

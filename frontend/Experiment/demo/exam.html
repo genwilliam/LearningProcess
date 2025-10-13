@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在线考试</title>
+  <style>
+    /* 简单样式 */
+    body { font-family: Arial, sans-serif; text-align: center; }
+    .exam-container { width: 60%; margin: auto; padding: 20px; border: 1px solid #ccc; }
+    .question { margin-bottom: 20px; text-align: left; }
+    .countdown { font-size: 24px; color: red; }
+    button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="exam-container">
+    <h2>在线考试</h2>
+    <div id="countdown" class="countdown">剩余时间: 10:00</div>
+    <div id="questions"></div>
+    <button id="submitBtn" onclick="submitExam()">提交</button>
+  </div>
+
+  <script>
+    let countdownTime = 10 * 60; // 10分钟倒计时
+    const questions = [
+      { question: "1+1等于多少？", options: ["1", "2", "3", "4"], answer: "2" },
+      { question: "2+2等于多少？", options: ["2", "3", "4", "5"], answer: "4" }
+    ];
+    let userAnswers = [];
+    let timer; // 定时器变量
+
+    function displayQuestions() {
+      const questionContainer = document.getElementById("questions");
+      questions.forEach((q, index) => {
+        let questionHTML = `<div class="question">
+                              <p>${q.question}</p>`;
+        q.options.forEach(opt => {
+          questionHTML += `<input type="radio" name="q${index}" value="${opt}" /> ${opt}<br>`;
+        });
+        questionHTML += `</div>`;
+        questionContainer.innerHTML += questionHTML;
+      });
+    }
+
+    function startCountdown() {
+      const countdownElem = document.getElementById("countdown");
+      timer = setInterval(() => {
+        let minutes = Math.floor(countdownTime / 60);
+        let seconds = countdownTime % 60;
+        countdownElem.innerText = `剩余时间: ${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+        if (countdownTime <= 0) {
+          clearInterval(timer);
+          alert("考试时间结束！");
+          submitExam();
+        } else {
+          countdownTime--;
+        }
+      }, 1000);
+    }
+
+    function submitExam() {
+      // 收集答案并计算分数
+      let score = 0;
+      questions.forEach((q, index) => {
+        const selectedAnswer = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selectedAnswer && selectedAnswer.value === q.answer) {
+          score++;
+        }
+      });
+      
+      // 停止倒计时
+      clearInterval(timer);
+      
+      // 将得分存储到 localStorage
+      localStorage.setItem("examScore", score);
+      
+      // 跳转到查询成绩页面
+      window.location.href = "search_grades.html";
+    }
+
+    displayQuestions();
+    startCountdown();
+  </script>
+</body>
+</html>

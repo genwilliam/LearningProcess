@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人相册</title>
+    <style>
+        /* 设置页面的背景和字体 */
+        body {
+            font-family: Arial;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 设置图片容器 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 设置图片样式 */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 鼠标悬停 */
+        .gallery img:hover {
+            transform: scale(1.05);  /*  放大图片 */
+        }
+    </style>
+</head>
+<body>
+    <h1>我的个人相册</h1>
+    
+    <!-- 图片展示区 -->
+    <div class="gallery">
+        <img src="image/th1.jpg" alt="">
+        <img src="image/th2.jpg" alt="">
+        <img src="image/th3.jpg" alt="">
+        <img src="image/th4.jpg" alt="">
+        <img src="image/th5.jpg" alt="">
+        <img src="image/th6.jpg" alt="">
+        <img src="image/th7.jpg" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试题管理</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .question-list {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>试题管理</h2>
+  <div class="question-list" id="questionList"></div>
+  <button onclick="addQuestion()">添加试题</button>
+
+  <script>
+    // 从 localStorage 获取试题列表，若没有则使用默认题目
+    let questions = JSON.parse(localStorage.getItem("questions")) || [
+      { question: "1+1等于多少？", options: ["1", "2", "3", "4"], answer: "2" },
+      { question: "2+2等于多少？", options: ["2", "3", "4", "5"], answer: "4" }
+    ];
+
+    function displayQuestions() {
+      const questionList = document.getElementById("questionList");
+      questionList.innerHTML = ''; // 清空列表
+      questions.forEach((q, index) => {
+        let questionHTML = `<div>
+                              <p>${q.question}</p>
+                              <ul>`;
+        q.options.forEach(opt => {
+          questionHTML += `<li>${opt}</li>`;
+        });
+        questionHTML += `</ul>
+                          <p>正确答案: ${q.answer}</p>
+                          <button onclick="deleteQuestion(${index})">删除</button>
+                          <hr></div>`;
+        questionList.innerHTML += questionHTML;
+      });
+
+      // 将题目保存到 localStorage 中
+      localStorage.setItem("questions", JSON.stringify(questions));
+    }
+
+    function addQuestion() {
+      // 通过弹窗获取管理员输入的新题目
+      const question = prompt("请输入新题目:");
+      const answer = prompt("请输入正确答案:");
+      const options = prompt("请输入选项，用逗号分隔:").split(",");
+
+      // 将新题目添加到 questions 数组
+      questions.push({ question, options, answer });
+
+      // 重新显示更新后的试题
+      displayQuestions();
+    }
+
+    function deleteQuestion(index) {
+      // 从数组中删除指定的题目
+      questions.splice(index, 1);
+
+      // 重新显示更新后的试题
+      displayQuestions();
+    }
+
+    // 初始化页面时显示所有试题
+    displayQuestions();
+  </script>
+</body>
+
+</html>

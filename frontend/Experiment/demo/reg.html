@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .register-box {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .link {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-box">
+        <h2>注册</h2>
+        <input type="text" id="regUsername" placeholder="用户名" required />
+        <input type="password" id="regPassword" placeholder="密码" required />
+        <input type="password" id="confirmPassword" placeholder="确认密码" required />
+        <button onclick="register()">注册</button>
+        <div class="link">
+            <button onclick="window.location.href='login.html'">返回登录</button>
+        </div>
+    </div>
+
+    <script>
+        function register() {
+            const username = document.getElementById("regUsername").value;
+            const password = document.getElementById("regPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            // 检查用户名和密码是否为空
+            if (!username || !password || !confirmPassword) {
+                alert("请填写所有字段");
+                return;
+            }
+
+            // 检查密码是否一致
+            if (password !== confirmPassword) {
+                alert("密码和确认密码不一致");
+                return;
+            }
+
+            // 在此处可以进行其他注册验证（如验证用户名是否已经注册）
+
+            // 假设注册成功
+            alert("注册成功！");
+            window.location.href = "login.html";  // 注册成功后返回登录页面
+        }
+    </script>
+</body>
+
+</html>

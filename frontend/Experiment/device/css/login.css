@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif; /* 设置页面字体为 Arial，如果不支持则使用 sans-serif */
+    background-color: #f4f4f9;
+    margin: 0; /* 移除页面的默认外边距 */
+    padding: 0; /* 移除页面的默认内边距 */
+    color: #333; /* 设置页面文本的颜色为深灰色 #333 */
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column; /* Flexbox 子元素的排列方向为纵向（列方向） */
+    /* min-height: 100vh; 设置页面最小高度为 100vh，即占满整个屏幕高度 */
+    overflow-x: hidden; /* 禁止横向滚动 */
+}
+
+
+header {
+    background-color: #4CAF50;
+    color: white; 
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between; /* 子元素之间的空间均匀分布，且子元素之间的间距自动调整 */
+    max-width: 1200px; /* 设置 main 元素的最大宽度为 1200px */
+    margin: 20px auto; /* 上下外边距为 20px，左右外边距为 auto，使其居中对齐 */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.title2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.index_list {
+    list-style-type: none; /* 去除列表项的默认标记符（如小圆点） */
+}
+
+.index_list li {
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.index_list li a {
+    text-decoration: none; /* 移除链接的下划线 */
+    color: #333;
+    font-size: 1.1em;
+}
+
+.index_list li:hover {
+    background-color: #e7f7e7; /* 鼠标悬停时*/
+}
+
+.tool-list {
+    list-style-type: none; /* 去除工具列表的默认标记符（如小圆点） */
+    padding: 0;
+}
+
+.tool-list li {
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.tool-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+}
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "isYear"></p>
+</body>
+<script>
+    // 弹出输入框，提示用户输入年份
+    const year = prompt("请输入年份", "");
+        if (year !== null) {
+            if (isNaN(year) || year.trim() === "") {
+                alert("请输入有效的年份！");
+            } else {
+                const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+                document.getElementById("isYear").textContent = `年份 ${year} ${isLeapYear? "是" : "不是"}闰年`;
+            }
+        }
+
+</script>
+</html>

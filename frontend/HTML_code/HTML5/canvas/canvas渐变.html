@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150"></canvas>
+<canvas id="Canvas" width="300" height="150"></canvas>
+</body>
+
+<script>
+    const c = document.getElementById("myCanvas");
+    const ctx = c.getContext("2d");
+
+    // 创建渐变
+    const grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    // 填充渐变
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+
+
+    const c1 = document.getElementById("Canvas");
+    const ctx1 = c1.getContext("2d");
+
+    // 创建渐变
+    const grd1 = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+    grd1.addColorStop(0, "red");
+    grd1.addColorStop(1, "white");
+
+    // 填充渐变
+    ctx1.fillStyle = grd1;
+    ctx1.fillRect(10, 10, 150, 80);
+</script>
+</html>

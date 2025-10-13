@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #dynamic-message {
+            font-size: 2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<h1 id="dynamic-message">Hello, World!!</h1>
+<button onclick="changeMessage()">Change Message</button>
+
+<script>
+    function changeMessage() {
+        const messages = [
+            'Hello, Universe!!',
+            'Greetings, World!!',
+            'Hi, Earthlings!!',
+            'Howdy, Planet!!'
+        ];
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        document.getElementById('dynamic-message').innerText = messages[randomIndex];
+        
+    }
+</script>
+</body>
+</html>

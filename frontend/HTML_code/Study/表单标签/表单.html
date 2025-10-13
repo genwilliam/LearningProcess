@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的表单标签</title>
+</head>
+<body>
+
+<!--
+form表单属性：
+    action：表单提交的url，往何处提交数据，如果不指定，默认提交到当前页面
+    method：表单提交的方式
+        get：在url后面拼接表单数据。url有长度限制，是method的默认值
+        post：在消息体（请求体）中传递的，参数大小无限制
+-->
+
+<form action="" method="get">
+    <label for="username">用户名:
+        <input type="text" id="username" name="username">
+    </label>
+
+    <label for="age">年龄:
+        <input type="text" id="age" name="age">
+    </label>
+
+
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
+
+
+<!--
+表单标签
+
+． 场景 · 在网页中主要负责数据采集功能，如 注册、登录等数据采集。
+． 标签：<form>
+． 表单项：不同类型的 input 元素、下拉列表、文本域等。
+． <input>: 定义表单项，通过type属性控制输入形式
+． <select>：定义下拉列表
+． <textarea>：定义文本域
+． 属性 ·
+action：规定当提交表单时向何处发送表单数据，URL
+method：规定用于发送表单数据的方式。GET、POST
+
+-->

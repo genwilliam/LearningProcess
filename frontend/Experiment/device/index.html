@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="image/img.png" alt="">
+        <h2><span>Login</span></h2>
+        <input type="text" id="username" placeholder="Username">
+        <br>
+        <input type="password" id="password" placeholder="Password">
+        <br>
+        <input type="button" value="Login" onclick="login()">
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+
+            // 假设用户名和密码为admin
+            if (username === 'admin' && password === '123456') {
+                window.location.href = 'login.html';
+            } else {
+                errorMessage.textContent = '用户名或密码不正确';
+            }
+        }
+    </script>
+</body>
+
+</html>

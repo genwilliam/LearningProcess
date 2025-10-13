@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格示例</title>
+</head>
+<body>
+    <table align="center" border="1" cellspacing="0" cellpadding="20" width="500">
+        <!--
+        align用于定义表格的对齐方式（left , center , right）
+        border定义表格的边框
+        cellpadding 规定单元边缘与其内容之间的空白，默认1像素
+        cellspacing 规定单元格之间的空白，默认2像素
+        width 规定表格的宽度
+        height 规定表格高度
+         -->
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td colspan="2">张三</td>
+            <!--<td>23</td>-->
+            <td>男</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">李四</td>
+            <td>24</td>
+            <td>男</td>
+        </tr>
+
+        <tr>
+            <!--<td>王五</td>-->
+            <td>25</td>
+            <td>男</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

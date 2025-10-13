@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas2</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+
+</body>
+<script>
+    const c = document.getElementById("myCanvas");
+    const ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 10, 50);
+    setTimeout(() => {
+        ctx.clearRect(0, 0, c.width, c.height); // 清除画布
+        ctx.fillText("Goodbye World", 10, 50);  // 绘制新文本
+    }, 1000);  // 1000 毫秒 = 1 秒
+
+
+</script>
+</html>

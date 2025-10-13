@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peter World</title>
+    <!-- 通过css定义样式 -->
+    <style>
+        /* CSS样式 */
+        /* CSS的注释不是用// */
+        .highlight {
+            color: red; /* 设置文字颜色为红色 */
+        }
+        .container {
+            border: 1px solid black; /* 设置容器边框 */
+            padding: 10px; /* 设置容器内边距 */
+            margin-bottom: 20px; /* 设置容器底部外边距 */
+        }
+    </style>
+</head>
+<body>
+<!-- 使用<div>对一块区域进行操作 -->
+<div class="container">
+    使用
+    <div class="highlight">包含的字体会变成定义</div>
+    的样式,并且在div前后的、包含的内容会换行
+</div>
+
+<!-- 使用<span>对一小段文本或行内元素进行特殊操作 -->
+使用span包围的<span class="highlight">字体会变成一定</span>的样式，不会换行
+<span class="container">这是一个使用span包围的话</span>
+
+
+</body>
+</html>

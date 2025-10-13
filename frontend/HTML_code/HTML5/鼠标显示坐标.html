@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坐标显示</title>
+    <style>
+        #coordiv {
+            width: 199px;
+            height: 99px;
+            border: 1px solid #c3c3c3;
+            position: relative;
+        }
+        #coordinates {
+            margin-top: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="coordiv"
+     onmousemove="cnvs_getCoordinates(event)"
+     onmouseout="cnvs_clearCoordinates()">
+</div>
+<div id="coordinates">Coordinates: ( , )</div>
+
+<script>
+    function cnvs_getCoordinates(event) {
+        const coordiv = document.getElementById('coordiv');
+        const coordinates = document.getElementById('coordinates');
+
+        // 计算相对于 div 的坐标
+        const rect = coordiv.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        // 更新坐标显示
+        coordinates.textContent = `Coordinates: (${x.toFixed(0)}, ${y.toFixed(0)})`;
+    }
+
+    function cnvs_clearCoordinates() {
+        const coordinates = document.getElementById('coordinates');
+        coordinates.textContent = 'Coordinates: ( , )';
+    }
+</script>
+</body>
+</html>

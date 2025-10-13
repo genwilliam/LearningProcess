@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竖直导航菜单示例</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .nav-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .search-bar {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 offset-md-4">
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">首页</a>
+                    <a class="nav-link" href="#">图片</a>
+                    <a class="nav-link" href="#">文章</a>
+                    <a class="nav-link" href="#">关于我们</a>
+                    <a class="nav-link" href="#">更多</a>
+                </nav>
+                <div class="search-bar">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2 w-100" type="search" placeholder="搜索" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

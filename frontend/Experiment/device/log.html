@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Log Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .log-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .log-entry {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 5px solid #007BFF;
+        }
+        .log-entry button {
+            background-color: #FF5733;
+            border: none;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            float: right;
+        }
+        .log-entry button:hover {
+            background-color: #e04a2f;
+        }
+        .new-log {
+            margin-bottom: 20px;
+        }
+        .new-log input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .new-log button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .new-log button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="log-container">
+        <h2>个人日志管理</h2>
+
+        <div class="new-log">
+            <input type="text" id="new-log" placeholder="写下今天的日志...">
+            <button onclick="addLog()">添加日志</button>
+        </div>
+
+        <div id="log-list">
+            <!-- 日志 -->
+        </div>
+    </div>
+
+    <script>
+        function addLog() {
+            var newLog = document.getElementById('new-log').value;
+            if (!newLog) {
+                alert('日志内容不能为空！');
+                return;
+            }
+
+            // 创建新的日志条目
+            var logList = document.getElementById('log-list');
+            var logEntry = document.createElement('div');
+            logEntry.classList.add('log-entry');
+            
+            // 插入日志内容和删除按钮
+            logEntry.innerHTML = `
+                <p>${newLog}</p>
+                <button onclick="deleteLog(this)">删除</button>
+            `;
+
+            // 添加到日志列表
+            logList.appendChild(logEntry);
+
+            // 清空输入框
+            document.getElementById('new-log').value = '';
+        }
+
+        function deleteLog(button) {
+            // 删除日志条目
+            var logEntry = button.parentElement;
+            logEntry.remove();
+        }
+    </script>
+</body>
+</html>

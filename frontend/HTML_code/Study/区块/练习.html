@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--通过设置 width=device-width，可以让网页的宽度适配设备的屏幕宽度，
+    而通过设置 initial-scale=1.0，可以确保页面在加载时以原始比例显示，不会被自动缩放。-->
+    <title>Click Event</title>
+</head>
+<body>
+
+<p>点击 <span id="clickableText">这里</span> 查看详情。</p>
+
+<script>
+    document.getElementById('clickableText').addEventListener('click', function() {
+        alert('你点击了：' + this.innerText);  // 点击时弹出一个提示框
+    });
+</script>
+
+</body>
+</html>

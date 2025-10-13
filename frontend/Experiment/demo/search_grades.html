@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>查询成绩</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <h2>查询成绩</h2>
+  <p id="score"></p>
+
+  <script>
+    // 从 localStorage 获取存储的得分
+    const score = localStorage.getItem("examScore") || 0;
+    document.getElementById("score").innerText = `您的得分是: ${score} 分`;
+  </script>
+</body>
+</html>

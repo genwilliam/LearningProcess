@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期计算器</title>
+</head>
+
+<body>
+    <p id="date"></p>
+    <hr />
+    请输入新日期：
+    <br />
+    <input type="text" id="year"> 年
+    <input type="text" id="month"> 月
+    <input type="text" id="day"> 日
+    <button id="btn">计算</button>
+</body>
+
+<script>
+    // 获取当前日期
+    let currentDate = new Date();
+
+    // 获取年份
+    let year = currentDate.getFullYear();
+
+    // 获取月份，注意：月份从0开始，所以加1
+    let month = currentDate.getMonth() + 1;
+
+    // 获取日期
+    let day = currentDate.getDate();
+
+    // 格式化输出当前日期
+    document.getElementById('date').innerText =
+        "今天的日期为：" + year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
+
+    // 点击计算按钮，计算两个日期的相差天数
+    document.getElementById('btn').addEventListener('click', function () {
+        // 获取用户输入的新日期
+        let year_new = parseInt(document.getElementById('year').value);
+        let month_new = parseInt(document.getElementById('month').value) - 1; // 月份需减1
+        let day_new = parseInt(document.getElementById('day').value);
+
+        // 检查输入是否有效
+        if (isNaN(year_new) || isNaN(month_new) || isNaN(day_new)) {
+            document.getElementById('result').innerText = "请输入有效的日期！";
+            return;
+        }
+
+        // 创建日期对象
+        let date1 = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
+        let date2 = new Date(year_new, month_new, day_new);
+
+        // 计算时间差并转换为天数
+        let differenceInMilliseconds = Math.abs(date2 - date1); // 取绝对值，避免负数
+        let differenceInDays = differenceInMilliseconds / (1000 * 60 * 60 * 24);
+
+        alert("新日期和今天\n相差 " + differenceInDays + " 天");
+    });
+</script>
+
+</html>

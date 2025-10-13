@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+    font-weight: 400;/* 一般建议使用数字 400 == normal*/
+}
+div {
+    text-align: center;
+    color: #888888;
+    font-size: 12px;
+}
+
+p {
+    text-indent: 2em;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font: 16px/28px 'Microsoft YaHei';
+}
+.search {
+    color: #666666;
+    width: 170px;
+}
+.btn {
+    font-weight: 700;
+}
+.footer {
+    color: #888888;
+    font-size: 12px;
+}
+.write {
+    color: black;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在线考试</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="exam-container">
+    <h2>在线考试</h2>
+    <div id="timer">剩余时间: 10:00</div>
+
+    <form id="examForm">
+      <!-- 试题1 -->
+      <div class="question">
+        <p>1. JavaScript的主要用途是？</p>
+        <label><input type="radio" name="q1" value="a"> 创建网页的结构</label><br>
+        <label><input type="radio" name="q1" value="b"> 增强网页交互性</label><br>
+        <label><input type="radio" name="q1" value="c"> 图形设计</label><br>
+        <label><input type="radio" name="q1" value="d"> 网络通信</label><br>
+      </div>
+
+      <!-- 试题2 -->
+      <div class="question">
+        <p>2. HTML的全称是什么？</p>
+        <label><input type="radio" name="q2" value="a"> HyperText Markup Language</label><br>
+        <label><input type="radio" name="q2" value="b"> HyperText Model Language</label><br>
+        <label><input type="radio" name="q2" value="c"> Home Text Markup Language</label><br>
+        <label><input type="radio" name="q2" value="d"> Hyper Text Markup Link</label><br>
+      </div>
+
+      <!-- 提交按钮 -->
+      <button type="submit">提交考试</button>
+    </form>
+
+    <div id="score" style="display:none;">
+      <h3>考试成绩</h3>
+      <p id="scoreDisplay">得分：0</p>
+    </div>
+  </div>
+  
+  <script src="exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>小星星悬停效果</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #282c34;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .star {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 15px yellow;
+            pointer-events: none;
+            animation: fade-out 1s ease-out forwards;
+        }
+
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.body.addEventListener('mousemove', function(event) {
+            createStar(event.pageX, event.pageY);
+        });
+
+        function createStar(x, y) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${x}px`;
+            star.style.top = `${y}px`;
+
+            // 将星星添加到文档中
+            document.body.appendChild(star);
+
+            // 在 1 秒后移除星星
+            setTimeout(() => {
+                star.remove();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

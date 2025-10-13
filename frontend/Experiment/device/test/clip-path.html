@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斜线分割页面</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            width: 100%;
+        }
+
+        .left, .right {
+            flex: 1;
+            height: 100%;
+            position: relative;
+        }
+
+        .left {
+            background-image: url('left-image.jpg');
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+
+        .right {
+            background-image: url('right-image.jpg');
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left">
+            <img src="../image/th1.jpg" alt="">
+        </div>
+        <div class="right">
+            <img src="../image/th3.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+</html>

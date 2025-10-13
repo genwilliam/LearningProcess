@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>地理知识问答</title>
+    <script type="text/javascript">
+        function checkAnswer(questionType) {
+    let resultText = '';
+    if (questionType === 'continent') {
+        let selectedContinent = document.querySelector('input[name="continent"]:checked');
+        if (selectedContinent && selectedContinent.value === '北美洲') {
+            resultText = '你的答案是：北美洲【正确】';
+        } else {
+            resultText = '你的答案是：' + (selectedContinent ? selectedContinent.value : '未知') + '【错误】';
+        }
+        document.getElementById('resultContinent').innerText = resultText;
+    } else if (questionType === 'cities') {
+        let selectedCities = [];
+        let inputs = document.querySelectorAll('input[name="cities"]:checked');
+        inputs.forEach((input) => {
+            selectedCities.push(input.value);
+        });
+        if (selectedCities.includes('东京')) {
+            resultText = '你的答案是：' + selectedCities.join('、') + '【错误】';
+        } else {
+            resultText = '你的答案是：' + selectedCities.join('、') + '【正确】';
+        }
+        document.getElementById('resultCities').innerText = resultText;
+    }
+}
+        
+    </script>
+</head>
+<body>
+    
+    <form id="quizForm">
+        <fieldset>
+        <legend>美国在哪个大洲？</legend>
+        <input type="radio" id="northAmerica" name="continent" value="北美洲">
+        <label for="northAmerica">北美洲</label>
+        <input type="radio" id="southAmerica" name="continent" value="南美洲">
+        <label for="southAmerica">南美洲</label>
+        <input type="radio" id="asia" name="continent" value="亚洲">
+        <label for="asia">亚洲</label>
+        <button type="button" onclick="checkAnswer('continent')">提交答案</button>
+        </fieldset>
+    </form>
+    
+    <p id="resultContinent"></p>
+    <form>
+        <fieldset>
+    <legend>哪些城市是中国的？</legend>
+    <input type="checkbox" id="shanghai" name="cities" value="上海">
+    <label for="shanghai">上海</label>
+    <input type="checkbox" id="tokyo" name="cities" value="东京">
+    <label for="tokyo">东京</label>
+    <input type="checkbox" id="nanjing" name="cities" value="南京">
+    <label for="nanjing">南京</label>
+    <input type="checkbox" id="beijing" name="cities" value="北京">
+    <label for="beijing">北京</label>
+    <button type="button" onclick="checkAnswer('cities')">提交答案</button>
+    </fieldset>
+    </form>
+    
+    <p id="resultCities"></p>
+</body>
+</html>

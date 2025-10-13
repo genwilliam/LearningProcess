@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input 表单元素</title>
+</head>
+<body>
+<form>
+    <!-- maxlength规定输入字段中的字符的最大长度 -->
+    <!-- submit提交按钮 -->
+    <!-- reset重置 -->
+    <!--text文本框（输入的内容可见）-->
+    <label for="username">用户名：
+        <input type="text" id="username" name="username" value="请输入用户名" maxlength="6">
+    </label>
+
+    <br />
+
+    <label for="age">年龄：
+        <input type="text" id="age" value="请输入年龄">
+    </label>
+
+    <br />
+
+    <!-- password文本框（输入的内容不可见）-->
+    <label for="password">密码：
+        <input type="password" id="password">
+    </label>
+
+    <br />
+
+    <!-- 单选按钮和复选框可以设置checked属性，当页面打开的时候就可以默认选中这个按钮 -->
+    <!-- radio单选按钮 -->
+    <label for="gender">性别：
+        男 <input type="radio" id="gender" name="sex">
+        女 <input type="radio" name="sex">
+    <!--name属性取相同的名字才可以实现多选一的效果，否则可以选多个，不合理-->
+    </label>
+
+    <br />
+
+    <!-- checkbox 复选框 实现多选效果-->
+    <label for="hobby">
+        吃饭<input type="checkbox" id="hobby">
+        睡觉<input type="checkbox">
+        打豆豆<input type="checkbox" checked="checked">
+    </label><br />
+    <input type="reset"><br />
+    <input type="submit">
+
+    <br />
+
+    <!-- 普通按钮button   后期结合JS使用-->
+    <input type="button" value="获取短信验证码"> <br />
+
+    <!-- 文件域 上传文件 -->
+    上传头像：<input type="file">
+</form>
+</body>
+</html>

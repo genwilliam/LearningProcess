@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #999999;
+            padding: 10px;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .menu>li {
+            position: relative;
+        }
+
+        .menu>li>a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .menu>li>a:hover {
+            background-color: #555555;
+        }
+
+        .dropdown,
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #666666;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 160px;
+        }
+
+        .dropdown {
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-menu {
+            top: 0;
+            left: 100%;
+        }
+
+        .dropdown li a,
+        .dropdown-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .dropdown li a:hover,
+        .dropdown-menu li a:hover {
+            background-color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">跟团游</a></li>
+            <li class="submenu">
+                <a href="#">自由行</a>
+                <ul class="dropdown">
+                    <li class="dropdown-submenu">
+                        <a href="#">国内自由行</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">机票+酒店</a></li>
+                            <li><a href="#">火车票+酒店</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#">出境自由行</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">机票+酒店</a></li>
+                            <li><a href="#">火车票+酒店</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">邮轮游</a></li>
+            <li><a href="#">主题游</a></li>
+            <li><a href="#">定制游</a></li>
+            <li><a href="#">出游服务</a></li>
+            <li><a href="#">机票</a></li>
+            <li><a href="#">攻略</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // 获取所有菜单项
+        const menuItems = document.querySelectorAll('.submenu');
+        const dropdownSubMenus = document.querySelectorAll('.dropdown-submenu');
+
+        // 为主菜单项添加事件监听
+        menuItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const dropdown = item.querySelector('.dropdown');
+                if (dropdown) dropdown.style.display = 'block';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                const dropdown = item.querySelector('.dropdown');
+                if (dropdown) dropdown.style.display = 'none';
+            });
+        });
+
+        // 为二级菜单项添加事件监听
+        dropdownSubMenus.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const dropdownMenu = item.querySelector('.dropdown-menu');
+                if (dropdownMenu) dropdownMenu.style.display = 'block';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                const dropdownMenu = item.querySelector('.dropdown-menu');
+                if (dropdownMenu) dropdownMenu.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用HTML DOM操作表格</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse; /* 合并边框 */
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black; /* 设置单条边框 */
+            text-align:     center;
+            padding: 8px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th id="titleColumn">书名</th> <!-- 给书名列添加一个ID方便操作 -->
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>网页工程实训</td>
+                <td>¥30.00</td>
+            </tr>
+            <tr>
+                <td>C语言工程实训</td>
+                <td>¥32.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addRow()">增加一行</button>
+    <button onclick="deleteSecondRow()">删除第2行</button>
+    <button onclick="changeTitle()">修改标题</button>
+
+    <script>
+        // 增加一行
+        function addRow() {
+            const table = document.getElementById('bookTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            cell1.innerText = "新书名";
+            cell2.innerText = "¥0.00";
+        }
+
+        // 删除第2行
+        function deleteSecondRow() {
+            const table = document.getElementById('bookTable').getElementsByTagName('tbody')[0];
+            if (table.rows.length >= 2) {
+                table.deleteRow(1);
+            } else {
+                alert("没有第2行可删除!");
+            }
+        }
+
+        // 修改表格的标题（让用户输入新的书名列标题）
+        function changeTitle() {
+            // 弹出输入框，提示用户输入新的列标题
+            const newTitle = prompt("请输入新的列标题：", "书名");
+            
+            // 判断用户是否输入了内容
+            if (newTitle) {
+                // 找到书名列（通过id）
+                const titleColumn = document.getElementById('titleColumn');
+                titleColumn.innerText = newTitle; // 修改标题内容
+            } else {
+                alert("标题未修改！");
+            }
+        }
+    </script>
+</body>
+</html>

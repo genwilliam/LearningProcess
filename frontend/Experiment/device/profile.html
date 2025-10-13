@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .profile-info, .edit-info {
+            margin-bottom: 20px;
+        }
+        .profile-info p, .edit-info input {
+            margin: 10px 0;
+        }
+        .edit-info input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .edit-info button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .edit-info button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>个人信息管理</h2>
+        <div class="profile-info">
+            <p><strong>用户名：</strong><span id="current-username">admin</span></p>
+            <p><strong>邮箱：</strong><span id="current-email">admin@qq.com</span></p>
+            <p><strong>手机号：</strong><span id="current-phone">13143215687</span></p>
+        </div>
+
+        <div class="edit-info">
+            <h3>修改信息</h3>
+            <label for="new-username">新用户名：</label>
+            <input type="text" id="new-username" placeholder="请输入新用户名">
+            <br>
+            <label for="new-email">新邮箱：</label>
+            <input type="email" id="new-email" placeholder="请输入新邮箱">
+            <br>
+            <label for="new-phone">新手机号：</label>
+            <input type="text" id="new-phone" placeholder="请输入新手机号">
+            <br>
+            <button onclick="updateProfile()">更新资料</button>
+            <p id="error-message" class="error"></p>
+        </div>
+    </div>
+
+    <script>
+        function updateProfile() {
+            var newUsername = document.getElementById('new-username').value;
+            var newEmail = document.getElementById('new-email').value;
+            var newPhone = document.getElementById('new-phone').value;
+            var errorMessage = document.getElementById('error-message');
+
+            // 清空错误信息
+            errorMessage.textContent = '';
+
+            // 验证输入
+            if (!newUsername || !newEmail || !newPhone) {
+                errorMessage.textContent = '所有字段都是必填的！';
+                return;
+            }
+
+            // 假设更新成功，更新页面内容
+            document.getElementById('current-username').textContent = newUsername;
+            document.getElementById('current-email').textContent = newEmail;
+            document.getElementById('current-phone').textContent = newPhone;
+
+            // 清空输入框
+            document.getElementById('new-username').value = '';
+            document.getElementById('new-email').value = '';
+            document.getElementById('new-phone').value = '';
+
+            alert('个人信息更新成功！');
+        }
+    </script>
+</body>
+</html>

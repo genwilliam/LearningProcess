@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    // 1. 用var定义
+    /*特点：
+    * 1. 作用域比较大，全局变量
+    * 2. 可以重复定义
+    * */
+    {
+        var x = 1;
+        var x = "A";
+    }
+    alert(x);
+
+    // 2. 用let定义
+    /*特点：
+    * 1. 局部变量
+    * 2. 不能重复定义
+    * */
+    {
+        let x = 1;
+        alert(x);  // 在大括号外面使用输出语句不能获取到
+    }
+
+    // 3. 用const定义
+    /*特点：
+    * 1. 常量
+    * 2. 不能改变
+    * */
+    const pi = 3.14;
+    const pi = 3.14159;
+    alert(pi);
+
+</script>
+
+</html>

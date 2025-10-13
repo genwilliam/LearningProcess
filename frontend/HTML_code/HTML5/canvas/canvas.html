@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+<canvas id="myCanvas2" width="200" height="100" style="border: 1px solid darkgreen;"></canvas>
+
+<div id="coordiv" style="float:left;width:199px;height:99px;border:1px solid #c3c3c3"
+     onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()">
+</div>
+
+<div id="can" style="float: left;width: 199px;height:99px;border:1px solid #c3c3c3"
+     onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()">
+</div>
+</body>
+<script>/*canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成*/
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");/*获取画布的2D渲染上下文，这是进行2D绘图的前提。*/
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0, 0, 150, 75);
+
+const c2 = document.getElementById("myCanvas2");
+if (c2) {
+    const ctx2 = c2.getContext("2d");
+    if (ctx2) {
+        ctx2.beginPath(); // 开始一个新的路径
+        ctx2.moveTo(0, 0);
+        ctx2.lineTo(200, 100);
+        ctx2.strokeStyle = 'red'; // 设置线条颜色为红色
+        ctx2.stroke();
+    } else {
+        console.error('无法获取myCanvas2的2D渲染上下文');
+    }
+} else {
+    console.error('无法找到myCanvas2元素');
+}
+
+/*
+* moveTo(x, y)
+    moveTo 方法将路径移动到画布中的指定点 (x, y)，但不会创建线条。它用于开始新的子路径或断开当前子路径。
+    使用 moveTo 可以改变绘制路径的起点，但不会在画布上绘制任何东西。
+lineTo(x, y)
+    lineTo 方法会创建一条从当前点到最后指定的点 (x, y) 的直线段，并且更新当前点到指定的终点。
+    如果之前没有调用 moveTo 或者另一个 lineTo，则 lineTo 的起始点将是路径的最后一个点，或者如果路径还没有开始，则起始点为空。
+stroke()
+    stroke() 方法实际上会在画布上绘制路径。路径是由一系列的 moveTo(), lineTo(), curveTo() 等方法定义的。
+    在调用 stroke() 之前，所有的 moveTo 和 lineTo 调用只是定义了路径，但并没有在画布上显示出来。
+    stroke 的样式可以通过 strokeStyle 属性来设置，比如颜色或渐变。
+* */
+</script>
+</html>

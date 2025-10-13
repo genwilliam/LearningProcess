@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>iframe</title>
+</head>
+<body>
+
+<!--iframe标签就是在一个框中显示指定的src的文本-->
+
+<!--  src ===> 该URL指向不同的网页。-->
+<iframe src="demo_iframe.htm" width="300" height="200"></iframe>
+
+<p>一些旧的浏览器不支持 iframe。</p>
+<p>如果浏览器不支持 iframes 则不会显示。</p>
+
+
+<!--frameborder 属性用于定义iframe表示是否显示边框。
+设置属性值为 "0" 移除iframe的边框:-->
+<iframe src="demo_iframe.htm" frameborder="0"></iframe>
+
+
+<!--iframe 可以显示一个目标链接的页面
+目标链接的属性必须使用 iframe 的属性，如下实例:-->
+
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="https://www.runoob.com" target="iframe_a" rel="noopener">RUNOOB.COM</a></p>
+</body>
+</html>

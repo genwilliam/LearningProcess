@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*建议按照以下顺序写*/
+
+        a:link {/*1. 本标签用于选择未被访问的链接*/
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:visited {/*2. 选择所有已被访问的链接*/
+            color: orange;
+        }
+
+        a:hover {/*3. 选择鼠标指针位于其上的链接*/
+            color: red;
+            font-size: 20px;
+        }
+
+        a:active {/*4. 选择活动链接（鼠标按下未弹起的链接）*/
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<a href="#">China</a>
+</body>
+</html>

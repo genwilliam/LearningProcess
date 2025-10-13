@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <style>
+        span {
+            color: #faebd7;
+            animation: colorChange 1s infinite alternate;
+        }
+        @keyframes colorChange {
+            to{
+                color: #ff0266;
+            }
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var oBtn = document.createElement("input");
+            oBtn.id = 'btn';
+            oBtn.type = 'button';
+            oBtn.value = '按钮';
+            document.body.appendChild(oBtn);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <span>H</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>o</span>
+        <span>W</span>
+        <span>o</span>
+        <span>r</span>
+        <span>l</span>
+        <span>d</span>
+    </div>
+</body>
+</html>

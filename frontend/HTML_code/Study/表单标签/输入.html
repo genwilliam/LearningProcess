@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/" method="post">
+    <!-- 文本输入框 -->
+
+    <!--action 属性定义了表单数据提交的目标
+    URL，method 属性定义了提交数据的 HTTP 方法-->
+    <label for="name">用户名:</label>
+    <input type="text" id="name" name="name" required>
+
+    <br>
+
+    <!-- 密码输入框 -->
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password" required>
+
+    <br>
+
+    <!-- 单选按钮 -->
+    <label>性别:</label>
+    <input type="radio" id="male" name="gender" value="male" checked>
+    <label for="male">男</label> <!--for属性绑定id-->
+    <input type="radio" id="female" name="gender" value="female">
+    <!--这里的name属性要一致，否则两个都可以选-->
+    <label for="female">女</label>
+
+
+    <br>
+
+    <!-- 复选框 -->
+    <input type="checkbox" id="subscribe" name="subscribe" checked>
+    <label for="subscribe">订阅推送信息</label>
+
+    <br>
+
+    <!-- 下拉列表 -->
+    <label for="country">国家:</label>
+    <select id="country" name="country">
+        <option value="cn">CN</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+    </select>
+
+    <br>
+
+    <!-- 提交按钮 -->
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>beginPath用法</title>
+</head>
+<body>
+<canvas id="myCanvas" width="250" height="130" style="border:1px solid #000000;"></canvas>
+</body>
+<script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // 开始第一条路径
+    ctx.beginPath();
+    ctx.strokeStyle = "green";
+    ctx.moveTo(0, 75);
+    ctx.lineTo(250, 75);
+    ctx.stroke();
+
+    // 开始第二条路径
+    ctx.beginPath();
+    ctx.strokeStyle = "purple";
+    ctx.moveTo(50, 0);
+    ctx.lineTo(150, 130);
+    ctx.stroke();
+
+</script>
+</html>

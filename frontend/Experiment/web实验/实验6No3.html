@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小型计算器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin: 10px 0;
+        }
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>小型计算器</h1>
+
+    <!-- 第一部分 -->
+    <div class="section">
+        <h3>原始数据输入</h3>
+        <input type="number" id="input1" placeholder="输入一个数字">
+        <div class="buttons">
+            <button onclick="roundToNearest()">取整（四舍五入）</button>
+            <button onclick="ceil()">取整（大于）</button>
+            <button onclick="floor()">取整（小于）</button>
+            <button onclick="square()">平方</button>
+            <button onclick="abs()">绝对值</button>
+            <button onclick="naturalLog()">自然对数</button>
+            <button onclick="isPositive()">正负值</button>
+            <button onclick="mod()">余弦值</button>
+        </div>
+        <p>运算结果: <span id="result1"></span></p>
+    </div>
+
+    <!-- 第二部分 -->
+    <div class="section">
+        <h3>原始数据输入</h3>
+        <input type="number" id="num1" placeholder="输入第一个数字">
+        <input type="number" id="num2" placeholder="输入第二个数字">
+        <div class="buttons">
+            <button onclick="min()">求较小值</button>
+            <button onclick="max()">求较大值</button>
+        </div>
+        <p>运算结果: <span id="result2"></span></p>
+    </div>
+
+    <script>
+        // 第一部分功能
+        function roundToNearest() {
+            const input = parseFloat(document.getElementById("input1").value);
+            document.getElementById("result1").innerText = isNaN(input) ? "请输入数字" : Math.round(input);
+        }
+
+        function ceil() {
+            const input = parseFloat(document.getElementById("input1").value);
+            document.getElementById("result1").innerText = isNaN(input) ? "请输入数字" : Math.ceil(input);
+        }
+
+        function floor() {
+            const input = parseFloat(document.getElementById("input1").value);
+            document.getElementById("result1").innerText = isNaN(input) ? "请输入数字" : Math.floor(input);
+        }
+
+        function square() {
+            const input = parseFloat(document.getElementById("input1").value);
+            document.getElementById("result1").innerText = isNaN(input) ? "请输入数字" : input * input;
+        }
+
+        function abs() {
+            const input = parseFloat(document.getElementById("input1").value);
+            document.getElementById("result1").innerText = isNaN(input) ? "请输入数字" : Math.abs(input);
+        }
+
+        function naturalLog() {
+            const input = parseFloat(document.getElementById("input1").value);
+            document.getElementById("result1").innerText = isNaN(input) ? "请输入数字" : Math.log(input).toFixed(2);
+        }
+
+        function isPositive() {
+            const input = parseFloat(document.getElementById("input1").value);
+            if (isNaN(input)) {
+                document.getElementById("result1").innerText = "请输入数字";
+            } else {
+                document.getElementById("result1").innerText = input > 0 ? "正数" : input < 0 ? "负数" : "零";
+            }
+        }
+
+        function mod() {
+            const input = parseFloat(document.getElementById("input1").value);
+            document.getElementById("result1").innerText = isNaN(input) ? "请输入数字" : Math.cos(input).toFixed(2);
+        }
+
+        // 第二部分功能
+        function min() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result2").innerText =
+                isNaN(num1) || isNaN(num2) ? "请输入两个数字" : Math.min(num1, num2);
+        }
+
+        function max() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result2").innerText =
+                isNaN(num1) || isNaN(num2) ? "请输入两个数字" : Math.max(num1, num2);
+        }
+    </script>
+</body>
+</html>

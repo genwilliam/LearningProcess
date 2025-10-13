@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<div id="container" style="width:500px">
+
+    <div id="header" style="background-color:#FFA500;">
+        <h1 style="margin-bottom:0;">主要的网页标题</h1>
+    </div>
+
+    <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+        <b>菜单</b><br>  <!-- </b>显示为粗体 -->
+        HTML<br>
+        CSS<br>
+        JavaScript
+    </div>
+
+    <div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+        内容在这里
+    </div>
+
+    <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+        版权 © runoob.com
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<!--
+在这段代码中，使用了几个 CSS 属性来控制区块的位置和布局：
+
+1. `float` 属性：`float` 属性用于指定一个元素向左或向右浮动，使得其他元素可以环绕其周围。
+在这段代码中，`float: left;` 被应用于 `#menu` 和 `#content` 的样式中，使得它们向左浮动，使得它们在同一行内并排显示。
+
+2. `clear` 属性：`clear` 属性用于规定一个元素是否应该移动其周围的浮动元素。
+在这段代码中，`clear: both;` 被应用于 `#footer` 的样式中，使得 `#footer` 元素清除了其上方的所有浮动元素，
+确保它出现在它们下方。
+
+3. `width` 属性：`width` 属性用于设置元素的宽度。
+在这段代码中，`width` 属性被应用于 `#container`、`#menu` 和 `#content` 元素的样式中，
+分别设置了它们的宽度为 500px、100px 和 400px。
+
+4. 其他样式：例如 `background-color` 用于设置元素的背景颜色，`text-align` 用于设置文本的水平对齐方式等。
+
+通过这些 CSS 属性的设置，可以实现不同区块在页面中的上下或左右排列。
+-->
