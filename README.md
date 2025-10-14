@@ -100,6 +100,9 @@ LEARNINGPROCESS
 
 ### [**Go Study Notes**](./Go/)
 
+- [golang Standard directory structure](Go/DOC/golang标准目录结构.md)
+- [test assertion](Go/DOC/test断言.md)
+- [Packet guide method](Go/DOC/导包方式.md)
 - [Basic Go Syntax](Go/GoStudy)
 
 - [Leetcode Solutions](Go/leetcode)
@@ -109,6 +112,7 @@ LEARNINGPROCESS
   - [gin](Go/Library/Gin)
   - [viper](Go/Library/viperStu)
   - [zap](Go/Library/Zap)
+  - [miekg dns](Go/Library/miekg%20dns库.md)
 
 - [The Go Programming Language](Go/The%20Go%20Programming%20Language/)
 

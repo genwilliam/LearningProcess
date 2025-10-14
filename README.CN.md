@@ -98,12 +98,16 @@ LEARNINGPROCESS
 
 ### [**Go 学习记录**](./Go/)
 
+- [golang 标准目录结构](Go/DOC/golang标准目录结构.md)
+- [test 断言](Go/DOC/test断言.md)
+- [导包方式](Go/DOC/导包方式.md)
 - [golang 基础语法](Go/GoStudy)
 - [leetcode 的一些题](Go/leetcode)(根据题目顺序命名)
 - [golang 库](Go/Library)
   - [gin](Go/Library/Gin)
   - [viper](Go/Library/viperStu)
   - [zap](Go/Library/Zap)
+  - [miekg dns](Go/Library/miekg%20dns库.md)
 - [The Go Programming Language](Go/The%20Go%20Programming%20Language/)
 
 - [golang 设计理念](Go/golang设计理念.md)
