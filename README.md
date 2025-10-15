@@ -91,10 +91,12 @@ LEARNINGPROCESS
 
 ### [**MySQL Notes**](./MySQL/)
 
+- [view](MySQL/视图.md)
 - [Mysql Basics](MySQL/console.sql)
 - [Group By Gotchas](MySQL/group by.md)
 - [How to Learn MySQL](MySQL/How to learn MySQL.md)
 - [MySQL Snippets](MySQL/mysql小碎片.md)
+- [mysql data type](MySQL/mysql数据类型.md)
 
 ---
 
@@ -169,14 +171,17 @@ LEARNINGPROCESS
 
 ### **🐧** [**Linux System & Operations**](./Linux/)
 
+- [linux Learning Plan](Linux/Linux%20Learning%20Plan.md)
+
 1. **Getting Started**
 
    - [How to Get a Linux System](Linux/怎么拥有一个linux系统.md)
 
 2. **Command Line**
 
+   - [linux command](Linux/Linux%20command.md)
    - [Basic Linux Commands](Linux/Linux命令.md)
-   - [Shell](Linux/Shell.pdf)
+   - [Shell](Linux/Shell.pdf) or [shell（md)](Linux/Shell.md)
 
 3. **Text Processing**
 
@@ -191,6 +196,7 @@ LEARNINGPROCESS
 
 5. **Permissions**
 
+   - [chmod and chown](Linux/chmod%20and%20chown.md)
    - [File Ownership and Permissions](Linux/Linux文件权限与所有权详解.md)
    - [Sticky Bit](Linux/粘滞位（Sticky%20Bit）——让文件“粘”住.md)
 
@@ -209,7 +215,7 @@ LEARNINGPROCESS
 
 9. **File System**
 
-   - [Linux File System Explained](Linux/Linux%20文件系统详解.md)
+- [Linux File System Explained](Linux/Linux%20文件系统详解.md)
 
 ---
 
@@ -268,6 +274,7 @@ LEARNINGPROCESS
 - [计算机网络-自顶向下方法第七版](网络/计算机网络-自顶向下方法第七版.pdf)
 - [计算机网络-自顶向下课后答案 md](网络/计算机网络-自顶向下课后答案.md)
 - [计算机网络：自顶向下方法（第七版）课后习题参考答案 pdf](网络/计算机网络：自顶向下方法（第七版）课后习题参考答案.pdf)
+- [IP 地址后有/24 的含义](网络/IP地址后有%20杠24%20的含义.md)
 
 #### Others
 
@@ -278,8 +285,7 @@ LEARNINGPROCESS
 - [数据结构与算法分析：C 语言描述](书籍推荐/数据结构与算法分析：C语言描述（第2版）.pdf)
 - [程序是怎样跑起来的\_矢泽久雄](书籍推荐/程序是怎样跑起来的_矢泽久雄.pdf)
 - [计算机组成与设计-硬件-软件接口](书籍推荐/计算机组成与设计-硬件-软件接口.pdf)
-
--
+- [对 md5 文件的理解](Other/对md5文件的理解.md)
 
 ### **Blog Articles**
 
