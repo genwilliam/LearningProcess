@@ -93,8 +93,8 @@ LEARNINGPROCESS
 
 - [view](MySQL/视图.md)
 - [Mysql Basics](MySQL/console.sql)
-- [Group By Gotchas](MySQL/group by.md)
-- [How to Learn MySQL](MySQL/How to learn MySQL.md)
+- [Group By Gotchas](MySQL/group%20by.md)
+- [How to Learn MySQL](MySQL/How%20to%20learn%20MySQL.md)
 - [MySQL Snippets](MySQL/mysql小碎片.md)
 - [mysql data type](MySQL/mysql数据类型.md)
 
