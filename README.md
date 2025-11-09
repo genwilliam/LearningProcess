@@ -254,6 +254,7 @@ LEARNINGPROCESS
 - [Go 语言圣经(中文版](<书籍推荐/golang/Go语言圣经(中文版).pdf>)
 - [大厂 Go 工程师面试题集锦](书籍推荐/golang/大厂Go工程师面试题集锦.docx)
 - [Go 语言核心编程笔记 zip](书籍推荐/golang/Go语言核心编程笔记.zip)
+- [接口的底层原理与使用细节](Go/DOC/Go%20接口的底层原理与使用细节.md)
 
 #### linux
 
