@@ -121,6 +121,8 @@ LEARNINGPROCESS
 - [Go Design Philosophy](Go/golang设计理念.md)
 
 - [Recommended Source Code](Go/go源码阅读推荐)
+- [接口的底层原理与使用细节](Go/DOC/Go%20接口的底层原理与使用细节.md)
+- [Go 结构体与指针详解](Go/DOC/Go%20结构体与指针详解.md)
 
 - **Books**
 
@@ -166,6 +168,7 @@ LEARNINGPROCESS
 - [What is a DNS Server](Web/什么是DNS服务器.md)
 - [let, var, const differences](Web/let%20var%20const.md)
 - [DNS Record Types](Web/DNS类型记录.md)
+- [浏览器的“view page source”是什么](frontend/浏览器的“view%20page%20source”是什么.md)
 
 ---
 
@@ -254,7 +257,6 @@ LEARNINGPROCESS
 - [Go 语言圣经(中文版](<书籍推荐/golang/Go语言圣经(中文版).pdf>)
 - [大厂 Go 工程师面试题集锦](书籍推荐/golang/大厂Go工程师面试题集锦.docx)
 - [Go 语言核心编程笔记 zip](书籍推荐/golang/Go语言核心编程笔记.zip)
-- [接口的底层原理与使用细节](Go/DOC/Go%20接口的底层原理与使用细节.md)
 
 #### linux
 
