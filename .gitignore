@@ -1,0 +1,27 @@
+# macOS - 常用忽略项
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd/
+.DocumentRevisions-V100/
+.TemporaryItems/
+.VolumeIcon.icns
+.apdisk
+
+# 通用临时/系统文件
+*.swp
+*.swo
+*.tmp
+
+# 编辑器/IDE（视需要保留或删除）
+.vscode/
+.idea/
+*.iml
+
+# 可选：Windows 垃圾文件（若跨平台开发）
+Thumbs.db
+desktop.ini
