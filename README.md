@@ -123,6 +123,7 @@ LEARNINGPROCESS
 - [Recommended Source Code](Go/go源码阅读推荐)
 - [接口的底层原理与使用细节](Go/DOC/Go%20接口的底层原理与使用细节.md)
 - [Go 结构体与指针详解](Go/DOC/Go%20结构体与指针详解.md)
+- [`switch` 和 `fallthrough`](Go/聊聊%20Go%20里的%20switch%20和%20fallthrough.md)
 
 - **Books**
 
