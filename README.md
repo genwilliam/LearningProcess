@@ -116,6 +116,7 @@ LEARNINGPROCESS
 - [Go 结构体与指针详解](Go/DOC/Go%20结构体与指针详解.md)
 - [`switch` 和 `fallthrough`](Go/聊聊%20Go%20里的%20switch%20和%20fallthrough.md)
 - [go mod tidy 与 go get 的区别](Go/DOC/go%20mod%20tidy%20与%20go%20get%20的区别.md)
+- [Go 中的 go install、go build 与 go get](Go/DOC/Go%20中的%20go%20install、go%20build与%20go%20get.md)
 
 - book
   - [《Go 入门指南》](Go/《Go%20入门指南》.pdf)
