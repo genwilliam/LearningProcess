@@ -118,6 +118,7 @@ LEARNINGPROCESS
 - [go mod tidy 与 go get 的区别](Go/DOC/go%20mod%20tidy%20与%20go%20get%20的区别.md)
 - [Go 中的 go install、go build 与 go get](Go/DOC/Go%20中的%20go%20install、go%20build与%20go%20get.md)
 - [Go 测试体系：单元测试、基准测试、pprof、覆盖率的完整说明](Go/DOC/Go%20测试体系：单元测试、基准测试、pprof、覆盖率的完整说明.md)
+- [Go 生态的演进：从 GOPATH 到 Modules，再到 Workspace](Go/DOC/Go%20生态的演进：从%20GOPATH%20到%20Modules，再到%20Workspace.md)
 
 - book
   - [《Go 入门指南》](Go/《Go%20入门指南》.pdf)
