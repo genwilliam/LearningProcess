@@ -119,6 +119,7 @@ LEARNINGPROCESS
 - [Go 中的 go install、go build 与 go get](Go/DOC/Go%20中的%20go%20install、go%20build与%20go%20get.md)
 - [Go 测试体系：单元测试、基准测试、pprof、覆盖率的完整说明](Go/DOC/Go%20测试体系：单元测试、基准测试、pprof、覆盖率的完整说明.md)
 - [Go 生态的演进：从 GOPATH 到 Modules，再到 Workspace](Go/DOC/Go%20生态的演进：从%20GOPATH%20到%20Modules，再到%20Workspace.md)
+- [Go 里的 init：到底谁先跑，谁后跑？](Go/DOC/Go%20里的%20init：到底谁先跑，谁后跑？.md)
 
 - book
   - [《Go 入门指南》](Go/《Go%20入门指南》.pdf)
