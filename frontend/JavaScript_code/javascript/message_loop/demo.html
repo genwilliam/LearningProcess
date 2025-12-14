@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>message_loop</title>
+  </head>
+  <body>
+    <div id="text">hello</div>
+    <button id="button">to Chinese</button>
+  </body>
+  <script>
+    var text = document.querySelector("#text");
+    var button = document.querySelector("#button");
+
+    function sleep_ms(ms) {
+      var start = Date.now();
+      while (Date.now() - start < ms) {
+        // sleep ... ... ...
+      }
+    }
+
+    button.onclick = function () {
+      text.textContent = "你好";
+      sleep_ms(2000);
+    };
+  </script>
+</html>

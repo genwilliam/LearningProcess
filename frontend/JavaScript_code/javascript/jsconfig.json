@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "checkJs": true, // 开启 JS 类型检查
+    "strict": false, // 开启严格模式
+    "target": "es6"
+  },
+  "include": [
+    "./**/*.js",
+    "review/module/message.js",
+    "review/module/person.js",
+    "review/module/m_main.js"
+  ]
+}
