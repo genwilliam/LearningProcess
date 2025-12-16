@@ -220,6 +220,10 @@ LEARNINGPROCESS
 
 - [Linux 文件系统](Linux/Linux%20文件系统详解.md)
 
+#### nil
+
+- [当你拿到一台 Linux 服务器时，你需要做的第一件事](Linux/Whoami：从“我是谁”开始认识一台%20Linux%20服务器.md)
+
 ---
 
 ### 网络
