@@ -224,6 +224,8 @@ LEARNINGPROCESS
 
 - [当你拿到一台 Linux 服务器时，你需要做的第一件事](Linux/Whoami：从“我是谁”开始认识一台%20Linux%20服务器.md)
 
+- [linux 基础排障思路](Linux/从内核到配置差异：一次完整的排障思路.md)
+
 ---
 
 ### 网络
