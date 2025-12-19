@@ -257,7 +257,7 @@ LEARNINGPROCESS
 
 - [developer-loadmap](Github/developer-loadmap.md)
 
-公开资料中关于这个名字的项目比较少见，可能是一个个人整理的技术路线图或“开发者能力地图”类型的仓库。通常这样的项目会列出技术栈、能力框架、学习路线、工具列表等，帮助读者理解“作为开发者应该掌握什么”。
+项目列出技术栈、能力框架、学习路线、工具列表等，帮助读者理解“作为开发者应该掌握什么”。
 
 - [Fabrice Bellard](Github/Fabrice%20Bellard.md)
 
