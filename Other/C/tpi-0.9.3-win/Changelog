@@ -1,0 +1,12 @@
+version 0.9.3:
+
+- win64: fixed disk I/Os for files larger than 2G
+
+version 0.9.2:
+
+- win64: fixed FPU initialization
+- win64: fixed disk I/Os
+
+version 0.9:
+
+- initial public release

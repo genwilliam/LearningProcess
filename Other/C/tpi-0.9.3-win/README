@@ -1,0 +1,207 @@
+TPI - Pi computation program
+
+Copyright (c) 2009-2010 Fabrice Bellard
+
+0) Introduction
+---------------
+
+This program computes decimal or binary digits of Pi. For really large
+number of digits, the hard disk can be used to store temporary data. 
+
+It can be a good stress test for the CPU, the RAM and the hard
+disk(s). Do not use this program if your computer has a bad cooling !
+
+This version works for Linux 64 bit. There is no plan to release a 32
+bit version because it would be much slower than the 64 bit
+version. The executable was tested on a Fedora 10 distribution but
+should work on most recent distributions.
+
+A Windows 64 bit version is available too. Currently it does not
+support asynchronous and raw I/Os, so its performance is lower than
+the Linux version for disk based computations.
+
+The CPU must support the SSE3 instruction set, which is the case for
+all recent CPUs as the year of 2010.
+
+TPI is a short name for "Tachus PI". "Tachus" (pronounced "tacus")
+means "fast" in ancient Greek.
+
+1) Quick Start
+--------------
+
+1.1) Memory based computations
+------------------------------
+
+Type:
+
+ ./tpi -o pi.txt 10M
+
+to compute 10^7 digits of Pi. A single core is used. 
+
+If your CPU has 4 physical cores, type:
+
+./tpi -T 4 -o pi.txt 10M
+
+It should go faster.
+
+TPI needs about 6.4 times the size of the result as RAM. It
+corresponds to about 2.7 times the number of digits as bytes of
+RAM. Hence for 1G digits, you need at least 2.7 GB of RAM. Having more
+RAM than this minimum yields a faster computation.
+
+1.2) Disk based computations
+----------------------------
+
+Type:
+
+./tpi -T 4 -m 1Gi -d 10G -p /tmp/pi -o /tmp/pi/pi_base10.txt 1G
+
+to compute 10^9 digits of pi using at most 1GiB of RAM and 10GB of
+disk space. The temporary files are created in /tmp/pi. The result is
+in /tmp/pi/pi_base10.txt. 4 cores are used. Warning: it can be long.
+
+TPI needs at least 6.4 times the size of the result as disk space. It
+corresponds to about 2.7 times the number of digits as bytes of
+storage (same constraint as in the RAM only case).
+
+The more RAM you have, the faster is the computation.
+
+If the computation is interrupted, you can restart it with the
+"restart" command by using the latest checkpoint:
+
+./tpi -T 4 -m 1Gi -d 10G -p /tmp/pi -o /tmp/pi/pi_base10.txt restart /tmp/pi/1234-state45
+
+where "/tmp/pi/1234-state45" is the latest checkpoint written to disk.
+
+2) Usage
+--------
+
+usage: tpi [options] [n_digits|command] [params]
+
+Options are:
+------------
+
+-T n       
+
+Set number of threads to 'n' (default=1)
+
+-o file    
+
+Set output file (default = none)
+
+-m n
+
+Set max memory size to 'n' bytes. 
+
+-p path
+
+Set disk path (default = no disk use)
+
+-d n       
+
+Set max disk size to 'n' bytes. By default all the disk is used.
+
+-f format  
+
+Set output format to 'format': txt or bin (default = txt). 
+
+The binary format is more compact and much faster than the text
+format. It is the native format of the internal arbitrary precision
+arithmetic library. Digits stored using the binary format can be
+displayed using the tpidump utility. Take care to specify a display
+base similar as the one used for the computation. Source code is
+included to document the file format.
+
+A limitation of this version is that the binary format can only be used
+if a disk path is specified with the -p option. The binary file must
+be in the directory specified with -p.
+
+-a formula 
+
+Use 'formula':
+chud    Chudnovsky formula (default and fastest)
+rama    Ramanujan formula (slower, useful for verifications)
+
+-b         
+
+Output binary result (default = base 10 result)
+
+-c
+
+Enable final multiplication and base conversion check. Only useful for
+very large computation where hardware errors are likely.
+
+-v 
+
+Display memory usage and statistics
+
+-D         
+
+Use raw disk I/Os (Linux only). Raw disk I/Os can be faster for huge
+computations, but you need a suitable OS and filesystem to support it
+(Linux 2.6.x and ext4 are good choices).
+
+Commands are:
+-------------
+
+calc n_digits        
+
+Pi computation. If no command is specified, this is the default command.
+
+restart file1 [...]  
+
+Restart computation using a checkpoint. Also used to merge several
+checkpoints coming from the "split" command.
+
+split n_digits n     
+
+Generate checkpoint files to split among n processes (usually run on
+different machines). The "restart" command is used on each machine to
+start the computations using the generated checkpoint files. Then the
+results are combined with another "restart" on a single machine to
+finish the computation. This feature can be useful to distribute the
+computation on several PCs. Only the "binary splitting" phase can be
+parallelized this way.
+
+Example:
+
+./tpi -p /tmp/pi -o /tmp/pi_base10 split 10M 2
+
+./tpi -p /tmp/pi -o /tmp/pi_base10 restart /tmp/pi/x-state1
+./tpi -p /tmp/pi -o /tmp/pi_base10 restart /tmp/pi/x-state2
+
+./tpi -p /tmp/pi -o /tmp/pi_base10 restart /tmp/pi/x-stateN1 /tmp/pi/x-stateN2
+
+Notes:
+-----
+SI or binary prefixes can be used when entering numbers (e.g. 1k=1000,
+1Ki = 1024, 1M = 10^6, 1Mi = 2^20, ....). Scientific notation is
+allowed too (e.g. 1000000=1e6=1M).
+
+The maximum number of Pi digits that can be computed with this program
+is 2.7*10^12. People wishing to compute more digits should contact the
+author !
+
+3) More information
+-------------------
+
+More information on the algorithms is available at:
+
+http://bellard.org/pi/pi2700e9/
+
+It should be noted that although this program implements a library
+having an API similar to the GNU Multiprecision Library, it has no
+common code with it.
+
+4) License
+----------
+
+TPI is available free of charge, but its redistribution on any medium
+needs written consent of the author.
+
+TPI is available without any express or implied warranty. In no event
+will the author be held liable for any damages arising from the use of
+this software.
+
+
+Fabrice Bellard.
