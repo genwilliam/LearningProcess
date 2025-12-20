@@ -150,6 +150,8 @@ LEARNINGPROCESS
   - [Experiment](frontend/Experiment)
   - [购物商城](frontend/购物商城)
 
+-[前端可视化数据结构](frontend/数据结构/)
+
 - 一点点小知识：
 
   - [js 没报错怎么办](frontend/前端报错问题.md)
