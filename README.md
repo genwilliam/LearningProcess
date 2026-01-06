@@ -244,6 +244,7 @@ LEARNINGPROCESS
 - [git 简单推送](git/First.md)
 - [.gitignore 说明](git/关于.gitignore.md)
 - [我的.zshrc](git/config)
+- [Git 中的 HEAD、^、~，以及“分离 HEAD”到底在干什么](git/Git%20中的%20HEAD、^、，以及“分离%20HEAD”到底在干什么.md)
 
 ### docker
 
