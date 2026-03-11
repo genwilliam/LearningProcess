@@ -12,3 +12,5 @@
 6. [Master the command line, in one page](https://github.com/jlevy/the-art-of-command-line)
 
 7. [Cloudflare: what-is-dns](https://www.cloudflare.com/learning/dns/what-is-dns/)
+
+8. [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
