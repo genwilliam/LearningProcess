@@ -16,3 +16,5 @@
 8. [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
 
 9. [happy-llm](https://datawhalechina.github.io/happy-llm)
+
+10. [Codedex Projects](https://www.codedex.io/projects)
