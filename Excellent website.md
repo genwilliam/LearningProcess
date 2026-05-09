@@ -18,3 +18,5 @@
 9. [happy-llm](https://datawhalechina.github.io/happy-llm)
 
 10. [Codedex Projects](https://www.codedex.io/projects)
+
+11. [The largest collection of free stuff on the internet!](https://fmhy.net/)
