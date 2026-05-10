@@ -20,3 +20,5 @@
 10. [Codedex Projects](https://www.codedex.io/projects)
 
 11. [The largest collection of free stuff on the internet!](https://fmhy.net/)
+
+12. [《机器学习系统：设计和实现》](https://openmlsys.github.io/v1/cn/)
