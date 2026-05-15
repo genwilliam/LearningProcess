@@ -30,3 +30,5 @@
 15. [transformer 快速入门](https://transformers.run/)
 
 16. [A collection of useful .gitignore templates](https://github.com/github/gitignore)
+
+17. [A list of Free Software network services and web applications which can be hosted on your own servers](https://github.com/awesome-selfhosted/awesome-selfhosted)
