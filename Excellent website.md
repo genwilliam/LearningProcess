@@ -32,3 +32,5 @@
 16. [A collection of useful .gitignore templates](https://github.com/github/gitignore)
 
 17. [A list of Free Software network services and web applications which can be hosted on your own servers](https://github.com/awesome-selfhosted/awesome-selfhosted)
+
+18. [Free Domain](https://github.com/DigitalPlatDev/FreeDomain)
