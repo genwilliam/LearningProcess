@@ -34,3 +34,7 @@
 17. [A list of Free Software network services and web applications which can be hosted on your own servers](https://github.com/awesome-selfhosted/awesome-selfhosted)
 
 18. [Free Domain](https://github.com/DigitalPlatDev/FreeDomain)
+
+19. [做图工具](https://app.diagrams.net/)
+
+20. [画图工具](https://excalidraw.com/)
